@@ -1,0 +1,21 @@
+index,comment,non-information
+0,  // Ditto,yes
+1,// Nothing,yes
+2,#DEPTH_*,yes
+3,/**  * COMMIT3 Response  */,yes
+4,		// nothing,yes
+5,// Tool,yes
+6,// Tool,yes
+7, $NON-NLS-2$ $NON-NLS-3$,yes
+8, $NON-NLS-2$ $NON-NLS-3$,yes
+9,$NON-NLS-2$ $NON-NLS-3$,yes
+10,//#ifdef exercises,yes
+11,//#else,yes
+12,//#package org.eclipse.cdt.examples.dsf.dataviewer.answers;,yes
+13,//#endif,yes
+14,//#ifdef exercises,yes
+15,//#else,yes
+16,//#package org.eclipse.cdt.examples.dsf.dataviewer.answers;,yes
+17,//#endif,yes
+18,// good,yes
+19,// PASS,yes
