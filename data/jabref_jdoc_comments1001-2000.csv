@@ -1,0 +1,1994 @@
+"+    /**
++     * Gets all required data from {@link SharedDatabasePreferences} and sets them if present."
+"+    /**
++     * Queries the database for shared entries. Optionally, they are filtered by the given list of sharedIds
++     *
++     * @param sharedIDs the list of Ids to filter. If list is empty, then no filter is applied"
+"+/**
++ * Stores the credentials for the test systems"
+"+    /**
++     * Determine the DBMSType to test from the environment variable ""DMBS"". In case that variable is not set, use ""PostgreSQL"" as default"
+"+    /**
++     * Parses the month and returns it in the JabRef format"
+"+/**
++ * This class represents the removal of entries. The constructor needs
++ * references to the database, the entries, and the map of open entry editors.
++ * TODO is this map still being used?
++ * The latter to be able to close the entry's editor if it is opened after
++ * an undo, and the removal is then undone."
+"+/**
++ * This event is fired when the user tries to push changes of one or more obsolete
++ * {@link BibEntry} to the server."
+"+    /**
++     * @param bibEntries Affected {@link BibEntry}"
+"+/**
++ * <code>EntriesRemovedEvent</code> is fired when at least one <code>BibEntry</code> is removed
++ * from the database."
+"+    /**
++     * @param bibEntries <code>List</List></code> of <code>BibEntry</BibEntry></code> object which have been removed."
+"+    /**
++     * @param bibEntries <code>List</List></code> of <code>BibEntry</code> object which have been removed.
++     * @param location Location affected by this event"
+"+/**
++ * This abstract class pretends a minimal set of attributes and methods
++ * which an entries event should have."
+"+    /**
++     * @param bibEntries List of BibEntry objects which are involved in this event"
+"+    /**
++     * @param bibEntries List of BibEntry objects which are involved in this event
++     * @param location Location affected by this event"
+"+/**
++ * This enum represents the context EntriesEvents were sent from."
+"+/**
++ * A column that displays the text-value of the field"
+"+    /**
++     * Creates a column for group color bars."
+"+    /**
++     * Creates a text column to display any standard field."
+"+    /**
++     * Creates a clickable icons column for DOIs, URLs, URIs and EPrints."
+"+    /**
++     * A column that displays a SpecialField"
+"+    /**
++     * Creates a column for all the linked files. Instead of creating a column for a single file type, like {@code
++     * createExtraFileColumn} does, this creates one single column collecting all file links."
+"+    /**
++     * Creates a column for all the linked files of a single file type."
+"+/**
++ * Represents the full internal name of a column in the main table. Consists of two parts:
++ * The type of the column and a qualifier, like the field name to be displayed in the column."
+"+    /**
++     * This is used by the preferences dialog, to initialize available columns the user can add to the table.
++     *
++     * @param type the {@code MainTableColumnModel.Type} of the column, e.g. ""NORMALFIELD"" or ""GROUPS""
++     * @param qualifier the stored qualifier of the column, e.g. ""author/editor"""
+"+    /**
++     * This is used by JabRefPreferences, to create a new ColumnModel out ouf the stored preferences.
++     *
++     * @param rawColumnName the stored name of the column, e.g. ""field:author""
++     * @param width the stored width of the column"
+"+    /**
++     * This is used by the preferences dialog, to allow the user to type in a field he wants to add to the table.
++     *
++     * @param rawColumnName the stored name of the column, e.g. ""field:author"", or ""author"""
+"+    /**
++     * The former preferences default of columns was a simple list of strings (""author;title;year;...""). Since 5.0
++     * the preferences store the type of the column too, so that the formerly hardwired columns like the graphic groups
++     * column or the other icon columns can be reordered in the main table and behave like any other field column
++     * (""groups;linked_id;field:author;special:readstatus;extrafile:pdf;..."").
++     *
++     * Simple strings are by default parsed as a FieldColumn, so there is nothing to do there, but the formerly hard
++     * wired columns need to be added."
+"+/**
++ * Simplifies LaTeX syntax. {@see org.jabref.logic.layout.format.RemoveLatexCommandsFormatter} for a formatter removing LaTeX commands completely."
+"+/**
++ * When having to use a LayoutFormatter as Formatter, this class is helpful. One usecase is {@link org.jabref.model.cleanup.FieldFormatterCleanup}"
+"+    /**
++     *  Copy file to default file folder"
+"+    /**
++     *  Link file (without copying)"
+"+    /**
++     * Copy, rename and link file"
+"+/**
++ * Defines the different abbreviation types that JabRef can operate with."
+"+    /**
++     * Select the last abbreviation in the list of abbreviations"
+"+    /**
++     * Select the last abbreviation in the list of abbreviations"
+"+    /**
++     * Invokes {@code subscriber} for the every new value of {@code observable}, but not for the current value.
++     *
++     * @param observable observable value to subscribe to
++     * @param subscriber action to invoke for values of {@code observable}.
++     * @return a subscription that can be used to stop invoking subscriber for any further {@code observable} changes.
++     * @apiNote {@link EasyBind#subscribe(ObservableValue, Consumer)} is similar but also invokes the {@code subscriber} for the current value"
+"+    /**
++     * Cache that stores the field as keyword lists (format <Field, Separator, Keyword list>)"
+"+/**
++ * Represents a BibTex / BibLaTeX entry.
++ *
++ * In case you search for a builder as described in Item 2 of the book ""Effective Java"", you won't find one. Please use the methods {@link #withCiteKey(String)} and {@link #withField(Field, String)}."
+"+/**
++ * Fetches data from the SAO/NASA Astrophysics Data System (http://www.adsabs.harvard.edu/)
++ * <p>
++ * Search query-based: http://adsabs.harvard.edu/basic_search.html Entry -based: http://adsabs.harvard.edu/abstract_service.html
++ * <p>
++ * There is also a new API (https://github.com/adsabs/adsabs-dev-api) but it returns JSON (or at least needs multiple
++ * calls to get BibTeX, status: September 2016)"
+"+    /**
++     * Get the String residing on the primary clipboard.
++     *
++     * @return any text found on the primary Clipboard; if none found, try with the system clipboard."
+"+    /**
++     * Puts content onto the system clipboard.
++     *
++     * @param content the ClipboardContent to set as current value of the system clipboard."
+"+    /**
++     * Puts content onto the primary clipboard.
++     *
++     * @param content the ClipboardContent to set as current value of the primary clipboard."
+"+    /**
++     * @param bibcodes collection of bibcodes for which a JSON object should be created"
+"+    /**
++     * @return export URL endpoint"
+"+    /**
++     * @param query query string, matching the apache solr format
++     * @return URL which points to a search request for given query"
+"+    /**
++     * @param entry BibEntry for which a search URL is created
++     * @return URL which points to a search request for given entry"
+"+    /**
++     * @param identifier bibcode or doi for which a search URL is created
++     * @return URL which points to a search URL for given identifier"
+"+    /**
++     * @param url search ul for which bibcode will be returned
++     * @return list of bibcodes matching the search request. May be empty"
+"+    /**
++     * @param identifiers bibcodes for which bibentries ahould be fetched
++     * @return list of bibentries matching the bibcodes. Can be empty and differ in size to the size of requested
++     * bibcodes"
+"+    /**
++     * @param bibcodes collection of bibcodes for which a JSON object should be created"
+"+    /**
++     * @return export URL endpoint"
+"+    /**
++     * @param query query string, matching the apache solr format
++     * @return URL which points to a search request for given query"
+"+    /**
++     * @param entry BibEntry for which a search URL is created
++     * @return URL which points to a search request for given entry"
+"+    /**
++     * @param identifier bibcode or doi for which a search URL is created
++     * @return URL which points to a search URL for given identifier"
+"+    /**
++     * @param url search ul for which bibcode will be returned
++     * @return list of bibcodes matching the search request. May be empty"
+"+    /**
++     * @param identifiers bibcodes for which bibentries ahould be fetched
++     * @return list of bibentries matching the bibcodes. Can be empty and differ in size to the size of requested
++     * bibcodes"
+"+/**
++ * Fetches data from the SAO/NASA Astrophysics Data System (http://www.adsabs.harvard.edu/)
++ * <p>
++ * Search query-based: http://adsabs.harvard.edu/basic_search.html Entry -based: http://adsabs.harvard.edu/abstract_service.html
++ * <p>
++ * There is also a new API (https://github.com/adsabs/adsabs-dev-api) but it returns JSON (or at least needs multiple
++ * calls to get BibTeX, status: September 2016)"
+"+    /**
++     * Select and open entry editor for first entry in main table."
+"+    /**
++     * Select and open entry editor for first entry in main table."
+"+    /**
++     * Add X11 clipboard support to a text input control.
++     * It is necessary to call this method in every input where you want to use it:
++     * {@code ClipBoardManager.addX11Support(TextInputControl input);}.
++     *
++     * @param input the TextInputControl (e.g., TextField, TextArea, and children) where adding this functionality.
++     * @see <a href=""https://www.uninformativ.de/blog/postings/2017-04-02/0/POSTING-en.html"">Short summary for X11 clipboards</a>
++     * @see <a href=""https://unix.stackexchange.com/questions/139191/whats-the-difference-between-primary-selection-and-clipboard-buffer/139193#139193"">Longer text over clipboards</a>"
+"+    /**
++     * Get the String residing on the primary clipboard.
++     *
++     * @return any text found on the primary Clipboard; if none found, try with the system clipboard."
+"+    /**
++     * Puts content onto the primary clipboard.
++     *
++     * @param content the ClipboardContent to set as current value of the primary clipboard."
+"+    /**
++     * Puts content onto the clipboard."
+"+    /**
++     * @return sorted list containing search based fetchers"
+"+    /**
++     * @return sorted list containing id based fetchers"
+"+    /**
++     * @return sorted list containing entry based fetchers"
+"+    /**
++     * @return sorted list containing id fetchers"
+"+    /**
++     * @return unsorted list containing fulltext fetchers"
+"+                    ""*****************************************************/\n"" +
++                    ""!function(e,t){\""object\""==typeof exports&&\""undefined\""!=typeof module?module.exports=t():\""function\""==typeof define&&define.amd?define(t):e.Mark=t()}(this,function(){\""use strict\"";function e(t){return(e=\""function\""==typeof Symbol&&\""symbol\""==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&\""function\""==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?\""symbol\"":typeof e})(t)}function t(e,t){if(!(e instanceof t))throw new TypeError(\""Cannot call a class as a function\"")}function n(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,\""value\""in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function r(e,t,r){return t&&n(e.prototype,t),r&&n(e,r),e}function o(){return(o=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e}).apply(this,arguments)}var i=\n"" +"
+"+                    ""/* */\n"" +"
+"+                    ""*****************************************************/\n"" +
++                    ""!function(e,t){\""object\""==typeof exports&&\""undefined\""!=typeof module?module.exports=t():\""function\""==typeof define&&define.amd?define(t):e.Mark=t()}(this,function(){\""use strict\"";function e(t){return(e=\""function\""==typeof Symbol&&\""symbol\""==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&\""function\""==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?\""symbol\"":typeof e})(t)}function t(e,t){if(!(e instanceof t))throw new TypeError(\""Cannot call a class as a function\"")}function n(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,\""value\""in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function r(e,t,r){return t&&n(e.prototype,t),r&&n(e,r),e}function o(){return(o=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e}).apply(this,arguments)}var i=\n"" +"
+"+                    ""/* */\n"" +"
+"+/**
++ * {@link AllInsertsFinishedEvent} is fired when insertion of {@link BibEntry} to the {@link BibDatabase} was finished."
+"+    /**
++     * @param bibEntry the entry which has been added"
+"+    /**
++     * @param bibEntry <code>BibEntry</code> object which has been added.
++     * @param location Location affected by this event"
+"+/**
++ * {@link AllInsertsFinishedEvent} is fired when insertion of {@link BibEntry} to the {@link BibDatabase} was finished."
+"+    /**
++     * @param bibEntry the entry which has been added"
+"+    /**
++     * @param bibEntry <code>BibEntry</code> object which has been added.
++     * @param location Location affected by this event"
+"+    /**
++     * Switch to next Preview style - should be overriden if a EntryEditorTab is actually showing a preview"
+"+    /**
++     * Switch to previous Preview style - should be overriden if a EntryEditorTab is actually showing a preview"
+"+/**
++ * This class contains some code taken from {@link com.sun.javafx.scene.control.behavior.TextInputControlBehavior},
++ * witch is not accessible and thus we have no other choice.
++ * TODO: remove this ugly workaround as soon as control behavior is made public
++ * reported at https://github.com/javafxports/openjdk-jfx/issues/583"
+"+    /**
++     * Returns the default context menu items (except undo/redo)"
+"+    /**
++     * @implNote taken from {@link com.sun.javafx.scene.control.behavior.TextFieldBehavior#contextMenuRequested(javafx.scene.input.ContextMenuEvent)}"
+"+    /**
++     * @implNote taken from {@link com.sun.javafx.scene.control.behavior.TextAreaBehavior#contextMenuRequested(javafx.scene.input.ContextMenuEvent)}"
+"+    /**
++     * Submits a one-shot task that becomes enabled after the given delay.
++     *
++     * @param task  the task to execute
++     * @param delay the time from now to delay execution
++     * @param unit  the time unit of the delay parameter
++     * @return a ScheduledFuture representing pending completion of
++     *         the task and whose {@code get()} method will return
++     *         {@code null} upon completion"
+"+    /**
++     * Switch to next Preview style - should be overriden if a EntryEditorTab is actually showing a preview"
+"+    /**
++     * Switch to previous Preview style - should be overriden if a EntryEditorTab is actually showing a preview"
+"+/**
++ * This class contains some code taken from {@link com.sun.javafx.scene.control.behavior.TextInputControlBehavior},
++ * witch is not accessible and thus we have no other choice.
++ * TODO: remove this ugly workaround as soon as control behavior is made public
++ * reported at https://github.com/javafxports/openjdk-jfx/issues/583"
+"+    /**
++     * Returns the default context menu items (except undo/redo)"
+"+    /**
++     * @implNote taken from {@link com.sun.javafx.scene.control.behavior.TextFieldBehavior#contextMenuRequested(javafx.scene.input.ContextMenuEvent)}"
+"+    /**
++     * @implNote taken from {@link com.sun.javafx.scene.control.behavior.TextAreaBehavior#contextMenuRequested(javafx.scene.input.ContextMenuEvent)}"
+"+    /**
++     * Submits a one-shot task that becomes enabled after the given delay.
++     *
++     * @param task  the task to execute
++     * @param delay the time from now to delay execution
++     * @param unit  the time unit of the delay parameter
++     * @return a ScheduledFuture representing pending completion of
++     *         the task and whose {@code get()} method will return
++     *         {@code null} upon completion"
+"+    /**
++     * Submits a one-shot task that becomes enabled after the given delay.
++     *
++     * @param task  the task to execute
++     * @param delay the time from now to delay execution
++     * @param unit  the time unit of the delay parameter
++     * @return a ScheduledFuture representing pending completion of
++     *         the task and whose {@code get()} method will return
++     *         {@code null} upon completion"
+"+    /**
++     * Submits a one-shot task that becomes enabled after the given delay.
++     *
++     * @param task  the task to execute
++     * @param delay the time from now to delay execution
++     * @param unit  the time unit of the delay parameter
++     * @return a ScheduledFuture representing pending completion of
++     *         the task and whose {@code get()} method will return
++     *         {@code null} upon completion"
+"+/**
++ * This class contains some code taken from {@link com.sun.javafx.scene.control.behavior.TextInputControlBehavior},
++ * witch is not accessible and thus we have no other choice.
++ * TODO: remove this ugly workaround as soon as control behavior is made public
++ * reported at https://github.com/javafxports/openjdk-jfx/issues/583"
+"+    /**
++     * Returns the default context menu items (except undo/redo)"
+"+    /**
++     * @implNote taken from {@link com.sun.javafx.scene.control.behavior.TextFieldBehavior#contextMenuRequested(javafx.scene.input.ContextMenuEvent)}"
+"+    /**
++     * @implNote taken from {@link com.sun.javafx.scene.control.behavior.TextAreaBehavior#contextMenuRequested(javafx.scene.input.ContextMenuEvent)}"
+"+ */
++
++package org.jabref.gui.openoffice;
++
++import java.io.BufferedReader;
++import java.io.File;
++import java.io.InputStream;
++import java.io.InputStreamReader;
++import java.io.PrintStream;
++import java.io.UnsupportedEncodingException;
++import java.net.URLClassLoader;
++import java.util.HashMap;
++import java.util.Hashtable;
++import java.util.Map;
++import java.util.Random;
++
++import com.sun.star.bridge.UnoUrlResolver;
++import com.sun.star.bridge.XUnoUrlResolver;
++import com.sun.star.comp.helper.BootstrapException;
++import com.sun.star.comp.helper.ComponentContext;
++import com.sun.star.comp.helper.ComponentContextEntry;
++import com.sun.star.comp.loader.JavaLoader;
++import com.sun.star.comp.servicemanager.ServiceManager;
++import com.sun.star.container.XSet;
++import com.sun.star.lang.XInitialization;
++import com.sun.star.lang.XMultiComponentFactory;
++import com.sun.star.lang.XMultiServiceFactory;
++import com.sun.star.lib.util.NativeLibraryLoader;
++import com.sun.star.loader.XImplementationLoader;
++import com.sun.star.uno.UnoRuntime;
++import com.sun.star.uno.XComponentContext;
++"
+"+*/
++public class Bootstrap {
++
++    private static final Random RANDOM_PIPE_NAME = new Random();
++    private static boolean M_LOADED_JUH = false;
++
++    private static void insertBasicFactories(XSet xSet, XImplementationLoader xImpLoader) throws Exception {
++        // insert the factory of the loader
++        xSet.insert(xImpLoader.activate(""com.sun.star.comp.loader.JavaLoader"", null, null, null));
++
++        // insert the factory of the URLResolver
++        xSet.insert(xImpLoader.activate(""com.sun.star.comp.urlresolver.UrlResolver"", null, null, null));
++
++        // insert the bridgefactory
++        xSet.insert(xImpLoader.activate(""com.sun.star.comp.bridgefactory.BridgeFactory"", null, null, null));
++
++        // insert the connector
++        xSet.insert(xImpLoader.activate(""com.sun.star.comp.connections.Connector"", null, null, null));
++
++        // insert the acceptor
++        xSet.insert(xImpLoader.activate(""com.sun.star.comp.connections.Acceptor"", null, null, null));
++    }
++"
+"+     */
++    public static final String[] getDefaultOptions() {
++        return new String[] {""--nologo"", ""--nodefault"", ""--norestore"", ""--nolockcheck""};
++    }
++"
+"+     */
++    public static XComponentContext createInitialComponentContext(Hashtable<String, Object> context_entries) throws Exception {
++        return createInitialComponentContext((Map<String, Object>) context_entries);
++    }
++"
+"+    */
++    public static XComponentContext createInitialComponentContext(Map<String, Object> context_entries) throws Exception {
++        ServiceManager xSMgr = new ServiceManager();
++
++        XImplementationLoader xImpLoader = UnoRuntime.queryInterface(XImplementationLoader.class, new JavaLoader());
++        XInitialization xInit = UnoRuntime.queryInterface(XInitialization.class, xImpLoader);
++        Object[] args = new Object[] {xSMgr};
++        xInit.initialize(args);
++
++        // initial component context
++        if (context_entries == null) {
++            context_entries = new HashMap<>(1);
++        }
++        // add smgr
++        context_entries.put(""/singletons/com.sun.star.lang.theServiceManager"", new ComponentContextEntry(null, xSMgr));
++        // ... xxx todo: add standard entries
++        XComponentContext xContext = new ComponentContext(context_entries, null);
++
++        xSMgr.setDefaultContext(xContext);
++
++        XSet xSet = UnoRuntime.queryInterface(XSet.class, xSMgr);
++        // insert basic jurt factories
++        insertBasicFactories(xSet, xImpLoader);
++
++        return xContext;
++    }
++"
+"+     */
++    public static XMultiServiceFactory createSimpleServiceManager() throws Exception {
++        return UnoRuntime.queryInterface(XMultiServiceFactory.class, createInitialComponentContext((Map<String, Object>) null).getServiceManager());
++    }
++"
+"+    */
++    public static final XComponentContext defaultBootstrap_InitialComponentContext() throws Exception {
++        return defaultBootstrap_InitialComponentContext((String) null, (Map<String, String>) null);
++    }
++"
+"+     */
++    public static final XComponentContext defaultBootstrap_InitialComponentContext(String ini_file, Hashtable<String, String> bootstrap_parameters) throws Exception {
++        return defaultBootstrap_InitialComponentContext(ini_file, (Map<String, String>) bootstrap_parameters);
++    }
++"
+"+    */
++    public static final XComponentContext defaultBootstrap_InitialComponentContext(String ini_file, Map<String, String> bootstrap_parameters) throws Exception {
++        // jni convenience: easier to iterate over array than calling Hashtable
++        String pairs[] = null;
++        if (null != bootstrap_parameters) {
++            pairs = new String[2 * bootstrap_parameters.size()];
++            int n = 0;
++            for (Map.Entry<String, String> bootstrap_parameter : bootstrap_parameters.entrySet()) {
++                pairs[n++] = bootstrap_parameter.getKey();
++                pairs[n++] = bootstrap_parameter.getValue();
++            }
++        }
++
++        if (!M_LOADED_JUH) {
++            if (""The Android Project"".equals(System.getProperty(""java.vendor""))) {
++                // Find out if we are configured with DISABLE_DYNLOADING or
++                // not. Try to load the lo-bootstrap shared library which
++                // won't exist in the DISABLE_DYNLOADING case. (And which will
++                // be already loaded otherwise, so nothing unexpected happens
++                // that case.) Yeah, this would be simpler if I just could be
++                // bothered to keep a separate branch for DISABLE_DYNLOADING
++                // on Android, merging in master periodically, until I know
++                // for sure whether it is what I want, or not.
++
++                boolean disable_dynloading = false;
++                try {
++                    System.loadLibrary(""lo-bootstrap"");
++                } catch (UnsatisfiedLinkError e) {
++                    disable_dynloading = true;
++                }
++
++                if (!disable_dynloading) {
++                    NativeLibraryLoader.loadLibrary(Bootstrap.class.getClassLoader(), ""juh"");
++                }
++            } else {
++                NativeLibraryLoader.loadLibrary(Bootstrap.class.getClassLoader(), ""juh"");
++            }
++            M_LOADED_JUH = true;
++        }
++        return UnoRuntime.queryInterface(XComponentContext.class, cppuhelper_bootstrap(ini_file, pairs, Bootstrap.class.getClassLoader()));
++    }
++
++    private static native Object cppuhelper_bootstrap(String ini_file, String bootstrap_parameters[], ClassLoader loader) throws Exception;
++"
+"+     */
++    public static final XComponentContext bootstrap(URLClassLoader loader) throws BootstrapException {
++
++        String[] defaultArgArray = getDefaultOptions();
++        return bootstrap(defaultArgArray, loader);
++    }
++"
+"+    /**
++     * Determines where the mouse is in the given cell."
+"+ */
++
++package org.jabref.gui.openoffice;
++
++import java.io.BufferedReader;
++import java.io.File;
++import java.io.InputStream;
++import java.io.InputStreamReader;
++import java.io.PrintStream;
++import java.io.UnsupportedEncodingException;
++import java.nio.file.Path;
++import java.nio.file.Paths;
++import java.util.HashMap;
++import java.util.Hashtable;
++import java.util.Map;
++import java.util.Random;
++
++import com.sun.star.bridge.UnoUrlResolver;
++import com.sun.star.bridge.XUnoUrlResolver;
++import com.sun.star.comp.helper.BootstrapException;
++import com.sun.star.comp.helper.ComponentContext;
++import com.sun.star.comp.helper.ComponentContextEntry;
++import com.sun.star.comp.loader.JavaLoader;
++import com.sun.star.comp.servicemanager.ServiceManager;
++import com.sun.star.container.XSet;
++import com.sun.star.lang.XInitialization;
++import com.sun.star.lang.XMultiComponentFactory;
++import com.sun.star.lang.XMultiServiceFactory;
++import com.sun.star.lib.util.NativeLibraryLoader;
++import com.sun.star.loader.XImplementationLoader;
++import com.sun.star.uno.UnoRuntime;
++import com.sun.star.uno.XComponentContext;
++"
+"+*/
++public class Bootstrap {
++
++    private static void insertBasicFactories(
++        XSet xSet, XImplementationLoader xImpLoader )
++        throws Exception
++    {
++        // insert the factory of the loader
++        xSet.insert( xImpLoader.activate(
++            ""com.sun.star.comp.loader.JavaLoader"", null, null, null ) );
++
++        // insert the factory of the URLResolver
++        xSet.insert( xImpLoader.activate(
++            ""com.sun.star.comp.urlresolver.UrlResolver"", null, null, null ) );
++
++        // insert the bridgefactory
++        xSet.insert( xImpLoader.activate(
++            ""com.sun.star.comp.bridgefactory.BridgeFactory"", null, null, null ) );
++
++        // insert the connector
++        xSet.insert( xImpLoader.activate(
++            ""com.sun.star.comp.connections.Connector"", null, null, null ) );
++
++        // insert the acceptor
++        xSet.insert( xImpLoader.activate(
++            ""com.sun.star.comp.connections.Acceptor"", null, null, null ) );
++    }
++"
+"+     */
++    public static final String[] getDefaultOptions()
++    {
++        return new String[]
++        {
++            ""--nologo"",
++            ""--nodefault"",
++            ""--norestore"",
++            ""--nolockcheck""
++        };
++    }
++"
+"+     */
++    public static XComponentContext createInitialComponentContext( Hashtable<String, Object> context_entries )
++            throws Exception
++    {
++        return createInitialComponentContext((Map<String, Object>) context_entries);
++    }"
+"+    */
++    public static XComponentContext createInitialComponentContext( Map<String, Object> context_entries )
++        throws Exception
++    {
++        ServiceManager xSMgr = new ServiceManager();
++
++        XImplementationLoader xImpLoader = UnoRuntime.queryInterface(
++            XImplementationLoader.class, new JavaLoader() );
++        XInitialization xInit = UnoRuntime.queryInterface(
++            XInitialization.class, xImpLoader );
++        Object[] args = new Object [] { xSMgr };
++        xInit.initialize( args );
++
++        // initial component context
++        if (context_entries == null)
++            context_entries = new HashMap<String,Object>( 1 );
++        // add smgr
++        context_entries.put(
++            ""/singletons/com.sun.star.lang.theServiceManager"",
++            new ComponentContextEntry( null, xSMgr ) );
++        // ... xxx todo: add standard entries
++        XComponentContext xContext = new ComponentContext( context_entries, null );
++
++        xSMgr.setDefaultContext(xContext);
++
++        XSet xSet = UnoRuntime.queryInterface( XSet.class, xSMgr );
++        // insert basic jurt factories
++        insertBasicFactories( xSet, xImpLoader );
++
++        return xContext;
++    }
++"
+"+     */
++    public static XMultiServiceFactory createSimpleServiceManager() throws Exception
++    {
++        return UnoRuntime.queryInterface(
++            XMultiServiceFactory.class, createInitialComponentContext( (Map<String, Object>) null ).getServiceManager() );
++    }
++
++"
+"+    */
++    public static final XComponentContext defaultBootstrap_InitialComponentContext()
++        throws Exception
++    {
++        return defaultBootstrap_InitialComponentContext( (String) null, (Map<String,String>) null );
++    }"
+"+     */
++    public static final XComponentContext defaultBootstrap_InitialComponentContext(
++            String ini_file, Hashtable<String,String> bootstrap_parameters )
++            throws Exception
++    {
++        return defaultBootstrap_InitialComponentContext(ini_file, (Map<String,String>) bootstrap_parameters);
++
++    }"
+"+    */
++    public static final XComponentContext defaultBootstrap_InitialComponentContext(
++        String ini_file, Map<String,String> bootstrap_parameters )
++        throws Exception
++    {
++        // jni convenience: easier to iterate over array than calling Hashtable
++        String pairs [] = null;
++        if (null != bootstrap_parameters)
++        {
++            pairs = new String [ 2 * bootstrap_parameters.size() ];
++            int n = 0;
++            for (Map.Entry<String, String> bootstrap_parameter : bootstrap_parameters.entrySet()) {
++                pairs[ n++ ] = bootstrap_parameter.getKey();
++                pairs[ n++ ] = bootstrap_parameter.getValue();
++            }
++        }
++
++        if (! m_loaded_juh)
++        {
++            if (""The Android Project"".equals(System.getProperty(""java.vendor"")))
++            {
++                // Find out if we are configured with DISABLE_DYNLOADING or
++                // not. Try to load the lo-bootstrap shared library which
++                // won't exist in the DISABLE_DYNLOADING case. (And which will
++                // be already loaded otherwise, so nothing unexpected happens
++                // that case.) Yeah, this would be simpler if I just could be
++                // bothered to keep a separate branch for DISABLE_DYNLOADING
++                // on Android, merging in master periodically, until I know
++                // for sure whether it is what I want, or not.
++
++                boolean disable_dynloading = false;
++                try {
++                    System.loadLibrary( ""lo-bootstrap"" );
++                } catch ( UnsatisfiedLinkError e ) {
++                    disable_dynloading = true;
++                }
++
++                if (!disable_dynloading)
++                    {
++                        NativeLibraryLoader.loadLibrary( Bootstrap.class.getClassLoader(), ""juh"" );
++                    }
++            }
++            else
++            {
++                NativeLibraryLoader.loadLibrary( Bootstrap.class.getClassLoader(), ""juh"" );
++            }
++            m_loaded_juh = true;
++        }
++        return UnoRuntime.queryInterface(
++            XComponentContext.class,
++            cppuhelper_bootstrap(
++                ini_file, pairs, Bootstrap.class.getClassLoader() ) );
++    }
++
++    private static boolean m_loaded_juh = false;
++    private static native Object cppuhelper_bootstrap(
++        String ini_file, String bootstrap_parameters [], ClassLoader loader )
++        throws Exception;
++"
+"+     */
++    public static final XComponentContext bootstrap(String path)
++        throws BootstrapException {
++
++        String[] defaultArgArray = getDefaultOptions();
++        return bootstrap( defaultArgArray, path );
++    }
++"
+"+     */
++    public static final XComponentContext bootstrap( String[] argArray, String path )
++        throws BootstrapException {
++
++        XComponentContext xContext = null;
++
++        try {
++            // create default local component context
++            XComponentContext xLocalContext =
++                createInitialComponentContext( (Map<String, Object>) null );
++            if ( xLocalContext == null )
++                throw new BootstrapException( ""no local component context!"" );
++
++            // find office executable relative to this class's class loader
++            String sOffice =
++                System.getProperty( ""os.name"" ).startsWith( ""Windows"" ) ?
++                ""soffice.exe"" : ""soffice"";
++            
++            Path fOffice = Paths.get(path).resolve(sOffice).toAbsolutePath();
++            /*File fOffice = NativeLibraryLoader.getResource("
+"+    /**
++     * Determines where the mouse is in the given cell."
+"+/**
++ * This class can be used to wrap an @see ObservableList inside it. When wrapped, any Listener listening for updates to the wrapped ObservableList (for example because of a binding to it) is ensured to be notified on the JavaFX Application Thread. It should be used to implement bindings where updates come in from a background thread but should be reflected in the UI where it is necessary that changes to the UI are performed on the JavaFX Application thread.
++ *
++ * @param <E> the type of the elements of the wrapped ObservableList."
+"+/**
++ * This class can be used to wrap a @see StringProperty inside it. When wrapped, any Listener listening for updates to the wrapped StringProperty (for example because of a binding to it) is ensured to be notified on the JavaFX Application Thread. It should be used to implement bindings where updates come in from a background thread but should be reflected in the UI where it is necessary that changes to the UI are performed on the JavaFX Application thread.
++ *"
+"+        /* Analogous. */
+@@ -156,7 +156,7 @@ private VM(CommonTree tree) {
++        /*
+@@ -180,7 +180,7 @@ private VM(CommonTree tree) {"
+"+/**
++ * Class for obtaining shortened DOI names.
++ *
++ * @see http://shortdoi.org"
+"+    /**
++     * Obtains shortened DOI name for given DOI
++     *
++     * @param doi DOI
++     * @return A shortened DOI name"
+"+    /**
++     * Map an (empty) field of a BibEntry to a field of a cross-referenced entry.
++     *
++     * @param targetField field name of the BibEntry
++     * @param targetEntry type of the BibEntry
++     * @param sourceEntry type of the cross-referenced BibEntry
++     *
++     * @return the mapped field or null if there is no valid mapping available"
+"+     */
++    public boolean isShortDoi() {
++        return isShortDoi;
++    }
++"
+"+        /* Analogous. */
+@@ -156,7 +156,7 @@ private VM(CommonTree tree) {
++        /*
+@@ -180,7 +180,7 @@ private VM(CommonTree tree) {"
+"+/**
++ * This class can be used to wrap an @see ObservableList inside it. When wrapped, any Listener listening for updates to the wrapped ObservableList (for example because of a binding to it) is ensured to be notified on the JavaFX Application Thread. It should be used to implement bindings where updates come in from a background thread but should be reflected in the UI where it is necessary that changes to the UI are performed on the JavaFX Application thread.
++ *
++ * @param <E> the type of the elements of the wrapped ObservableList."
+"+/**
++ * This class can be used to wrap a @see StringProperty inside it. When wrapped, any Listener listening for updates to the wrapped StringProperty (for example because of a binding to it) is ensured to be notified on the JavaFX Application Thread. It should be used to implement bindings where updates come in from a background thread but should be reflected in the UI where it is necessary that changes to the UI are performed on the JavaFX Application thread.
++ *"
+"+    /**
++     * Map an (empty) field of a BibEntry to a field of a cross-referenced entry.
++     *
++     * @param targetField field name of the BibEntry
++     * @param targetEntry type of the BibEntry
++     * @param sourceEntry type of the cross-referenced BibEntry
++     *
++     * @return the mapped field or null if there is no valid mapping available"
+"+/**
++ * This class can be used to wrap an @see ObservableList inside it. When wrapped, any Listener listening for updates to the wrapped ObservableList (for example because of a binding to it) is ensured to be notified on the JavaFX Application Thread. It should be used to implement bindings where updates come in from a background thread but should be reflected in the UI where it is necessary that changes to the UI are performed on the JavaFX Application thread.
++ *
++ * @param <E> the type of the elements of the wrapped ObservableList."
+"+/**
++ * This class can be used to wrap a @see StringProperty inside it. When wrapped, any Listener listening for updates to the wrapped StringProperty (for example because of a binding to it) is ensured to be notified on the JavaFX Application Thread. It should be used to implement bindings where updates come in from a background thread but should be reflected in the UI where it is necessary that changes to the UI are performed on the JavaFX Application thread.
++ *"
+"+/**
++ * Class for obtaining shortened DOI names.
++ *
++ * @see http://shortdoi.org"
+"+    /**
++     * Obtains shortened DOI name for given DOI
++     *
++     * @param doi DOI
++     * @return A shortened DOI name"
+"+     */
++    public boolean isShortDoi() {
++        return isShortDoi;
++    }
++"
+"+        /* Analogous. */
+@@ -156,7 +156,7 @@ private VM(CommonTree tree) {
++        /*
+@@ -180,7 +180,7 @@ private VM(CommonTree tree) {"
+"+/**
++ * Class for obtaining shortened DOI names.
++ *
++ * @see http://shortdoi.org"
+"+    /**
++     * Obtains shortened DOI name for given DOI
++     *
++     * @param doi DOI
++     * @return A shortened DOI name"
+"+     */
++    public boolean isShortDoi() {
++        return isShortDoi;
++    }
++"
+"+        AUTO_LINKED_FILE(MaterialDesignIcon.BRIEFCASE_CHECK) /*css: briefcase-check */,
+@@ -251,6 +251,7 @@ public static URL getIconUrl(String name) {"
+"+        AUTO_LINKED_FILE(MaterialDesignIcon.BRIEFCASE_CHECK) /*css: briefcase-check */,
+@@ -251,6 +251,7 @@ public static URL getIconUrl(String name) {"
+"+/**
++ Custom Factory class as a workaround for using de.jensd.fx.glyphs.materialdesignicons.utils.MaterialDesignIconFactory because of the following issue: https://github.com/JabRef/jabref/issues/5245
++ If fixed, use de.jensd.fx.glyphs.materialdesignicons.utils.MaterialDesignIconFactory again and delete this class"
+"+/**
++ * JabRef Launcher"
+"+    /**
++     * Search and import unknown references from associated BIB files."
+"+    /**
++     * Find BIB files along a specific line and store them."
+"+    /**
++     * Add a bibliography file to the BIB files set."
+"+    /**
++     * Search and import unknown references from associated BIB files."
+"+    /**
++     * Find BIB files along a specific line and store them."
+"+    /**
++     * Add a bibliography file to the BIB files set."
+"+    /**
++     * especially for the track execute when the action run the same function but from different source.
++     * @param source is a string contains the source, for example ""button"""
+"+/**
++ * GUI Dialog for the feature ""Extract BibTeX from plain text""."
+"+    /**
++     * especially for the track execute when the action run the same function but from different source.
++     * @param source is a string contains the source, for example ""button"""
+"+/**
++ * GUI Dialog for the feature ""Extract BibTeX from plain text""."
+"+    /**
++     * especially for the track execute when the action run the same function but from different source.
++     * @param source is a string contains the source, for example ""button"""
+"+/**
++ * GUI Dialog for the feature ""Extract BibTeX from plain text""."
+"+        QUALITY(MaterialDesignIcon.CERTIFICATE), /*css: certificate */"
+"+        READ_STATUS(MaterialDesignIcon.EYE), /*css: eye */"
+"+    /**
++     * This method is called when the dialog is opened, or if it is made
++     * visible after being hidden. The tab should update all its values.
++     *
++     * This is the ONLY PLACE to set values for the fields in the tab. It
++     * is ILLEGAL to set values only at construction time, because the dialog
++     * will be reused and updated."
+"+    /**
++     * This method is called when the user presses OK in the
++     * Preferences dialog. Implementing classes must make sure all
++     * settings presented get stored in JabRefPreferences."
+"+    /**
++     * This method is called before the {@link #storeSettings()} method,
++     * to check if there are illegal settings in the tab, or if is ready
++     * to be closed.
++     * If the tab is *not* ready, it should display a message to the user
++     * informing about the illegal setting."
+"+    /**
++     * This method should be called after storing the preferences, to
++     * collect the properties, which require a restart of JabRef to load
++     *
++     * @return The messages for the changed properties (e. g. ""Changed language: English"")"
+"+/**
++ * A prefsTab is a component displayed in the PreferenceDialog.
++ *
++ * It needs to extend from Component."
+"+    /**
++     * Should return the localized identifier to use for the tab.
++     *
++     * @return Identifier for the tab (for instance ""General"", ""Appearance"" or ""External Files"")."
+"+    /**
++     * This method is called when the dialog is opened, or if it is made
++     * visible after being hidden. This calls the appropriate method in the
++     * ViewModel."
+"+    /**
++     * This method is called when the user presses OK in the Preferences
++     * dialog. This calls the appropriate method in the ViewModel."
+"+    /**
++     * This method is called before the {@link #storeSettings()} method,
++     * to check if there are illegal settings in the tab, or if is ready
++     * to be closed. This calls the appropriate method in the ViewModel."
+"+    /**
++     * This method should be called after storing the preferences, This
++     * calls the appropriate method in the ViewModel.
++     *
++     * @return The messages for the changed properties (e. g. ""Changed language: English"")"
+"+/**
++ * Fetcher for ISBN using https://www.ottobib.com"
+"+    /**
++     * @return null, because the identifier is passed using form data. This method is not used."
+"+    /**
++     * Checks whether two EntryTypeFactory are equal or not based on the equality of the type names and on the equality of
++     * the required and optional field lists
++     *
++     * @param type1 the first EntryType to compare
++     * @param type2 the secend EntryType to compare
++     * @return returns true if the two compared entry types have the same name and equal required and optional fields"
+"+    /**
++     * especially for the track execute when the action run the same function but from different source.
++     * @param source is a string contains the source, for example ""button"""
+"+/**
++ * GUI Dialog for the feature ""Extract BibTeX from plain text""."
+"+    /**
++     * Checks whether two EntryTypeFactory are equal or not based on the equality of the type names and on the equality of
++     * the required and optional field lists
++     *
++     * @param type1 the first EntryType to compare
++     * @param type2 the secend EntryType to compare
++     * @return returns true if the two compared entry types have the same name and equal required and optional fields"
+"+        QUALITY(MaterialDesignIcon.CERTIFICATE), /*css: certificate */"
+"+        READ_STATUS(MaterialDesignIcon.EYE), /*css: eye */"
+"+    /**
++     * This method is called when the dialog is opened, or if it is made
++     * visible after being hidden. The tab should update all its values.
++     *
++     * This is the ONLY PLACE to set values for the fields in the tab. It
++     * is ILLEGAL to set values only at construction time, because the dialog
++     * will be reused and updated."
+"+    /**
++     * This method is called when the user presses OK in the
++     * Preferences dialog. Implementing classes must make sure all
++     * settings presented get stored in JabRefPreferences."
+"+    /**
++     * This method is called before the {@link #storeSettings()} method,
++     * to check if there are illegal settings in the tab, or if is ready
++     * to be closed.
++     * If the tab is *not* ready, it should display a message to the user
++     * informing about the illegal setting."
+"+    /**
++     * This method should be called after storing the preferences, to
++     * collect the properties, which require a restart of JabRef to load
++     *
++     * @return The messages for the changed properties (e. g. ""Changed language: English"")"
+"+/**
++ * A prefsTab is a component displayed in the PreferenceDialog.
++ *
++ * It needs to extend from Component."
+"+    /**
++     * Should return the localized identifier to use for the tab.
++     *
++     * @return Identifier for the tab (for instance ""General"", ""Appearance"" or ""External Files"")."
+"+    /**
++     * This method is called when the dialog is opened, or if it is made
++     * visible after being hidden. This calls the appropriate method in the
++     * ViewModel."
+"+    /**
++     * This method is called when the user presses OK in the Preferences
++     * dialog. This calls the appropriate method in the ViewModel."
+"+    /**
++     * This method is called before the {@link #storeSettings()} method,
++     * to check if there are illegal settings in the tab, or if is ready
++     * to be closed. This calls the appropriate method in the ViewModel."
+"+    /**
++     * This method should be called after storing the preferences, This
++     * calls the appropriate method in the ViewModel.
++     *
++     * @return The messages for the changed properties (e. g. ""Changed language: English"")"
+"+    /**
++     * Checks if the two entries represent the same publication.
++     *
++     * @param one BibEntry
++     * @param two BibEntry
++     * @return boolean"
+"+    /**
++     * Goes through all entries in the given database, and if at least one of
++     * them is a duplicate of the given entry, as per
++     * Util.isDuplicate(BibEntry, BibEntry), the duplicate is returned.
++     * The search is terminated when the first duplicate is found.
++     *
++     * @param database The database to search.
++     * @param entry    The entry of which we are looking for duplicates.
++     * @return The first duplicate entry found. Empty Optional if no duplicates are found."
+"+/**
++ * Fetcher for ISBN using https://www.ottobib.com"
+"+    /**
++     * @return null, because the identifier is passed using form data. This method is not used."
+"+/**
++ * GUI Dialog for the feature ""Extract BibTeX from plain text""."
+"+        QUALITY(MaterialDesignIcon.CERTIFICATE), /*css: certificate */"
+"+        READ_STATUS(MaterialDesignIcon.EYE), /*css: eye */"
+"+    /**
++     * This will create and display new {@link TextInputDialog} with a text field with a default value to enter data"
+"+    /**
++     * This method returns a JComponent detailing the nature of the change.
++     * @return JComponent"
+"+    /**
++     * Performs the change. This method is responsible for adding a proper undo edit to
++     * the NamedCompound, so the change can be undone.
++     * @param database the database that should be modified accordingly.
++     * @param undoEdit NamedCompound The compound to hold the undo edits."
+"+/**
++ * Copies the doi url to the clipboard"
+"+    /**
++     * Gets a ScrollPane to display error info when recommendations fail.
++     * @return ScrollPane to display in place of recommendations"
+"+/**
++ * This Action may only be used in a menu or button.
++ * Never in the entry editor. FileListEditor and EntryEditor have other ways to update the file links"
+"+    /**
++     * Gets the filename for the current linked file and compares it to the new suggested filename.
++     * @return true if the suggested filename is same as current filename."
+"+    /**
++     * Compares suggested filepath of current linkedFile with existing filepath.
++     * @return true if suggested filepath is same as existing filepath."
+"+/**
++ * Fetcher for ISBN using https://www.ottobib.com"
+"+    /**
++     * @return null, because the identifier is passed using form data. This method is not used."
+"+/**
++ * Fetcher for ISBN using https://www.ottobib.com"
+"+    /**
++     * @return null, because the identifier is passed using form data. This method is not used."
+"+    /**
++     * This method is called when the dialog is opened, or if it is made
++     * visible after being hidden. The tab should update all its values.
++     *
++     * This is the ONLY PLACE to set values for the fields in the tab. It
++     * is ILLEGAL to set values only at construction time, because the dialog
++     * will be reused and updated."
+"+    /**
++     * This method is called when the user presses OK in the
++     * Preferences dialog. Implementing classes must make sure all
++     * settings presented get stored in JabRefPreferences."
+"+    /**
++     * This method is called before the {@link #storeSettings()} method,
++     * to check if there are illegal settings in the tab, or if is ready
++     * to be closed.
++     * If the tab is *not* ready, it should display a message to the user
++     * informing about the illegal setting."
+"+    /**
++     * This method should be called after storing the preferences, to
++     * collect the properties, which require a restart of JabRef to load
++     *
++     * @return The messages for the changed properties (e. g. ""Changed language: English"")"
+"+/**
++ * A prefsTab is a component displayed in the PreferenceDialog.
++ *
++ * It needs to extend from Component."
+"+    /**
++     * Should return the localized identifier to use for the tab.
++     *
++     * @return Identifier for the tab (for instance ""General"", ""Appearance"" or ""External Files"")."
+"+    /**
++     * This method is called when the dialog is opened, or if it is made
++     * visible after being hidden. This calls the appropriate method in the
++     * ViewModel."
+"+    /**
++     * This method is called when the user presses OK in the Preferences
++     * dialog. This calls the appropriate method in the ViewModel."
+"+    /**
++     * This method is called before the {@link #storeSettings()} method,
++     * to check if there are illegal settings in the tab, or if is ready
++     * to be closed. This calls the appropriate method in the ViewModel."
+"+    /**
++     * This method should be called after storing the preferences, This
++     * calls the appropriate method in the ViewModel.
++     *
++     * @return The messages for the changed properties (e. g. ""Changed language: English"")"
+"+    /**
++     * Search and import unknown references from associated BIB files."
+"+    /**
++     * Find BIB files along a specific line and store them."
+"+    /**
++     * Add a bibliography file to the BIB files set."
+"+    /**
++     * Gets a ScrollPane to display error info when recommendations fail.
++     * @return ScrollPane to display in place of recommendations"
+"+/**
++ * Preferences dialog. Contains a TabbedPane, and tabs will be defined in separate classes. Tabs MUST implement the
++ * PrefsTab interface, since this dialog will call the storeSettings() method of all tabs when the user presses ok."
+"+    /**
++     * Reloads the JabRefPreferences into the UI"
+"+    /**
++     * Checks if all tabs are valid
++     * ToDo: After conversion of all tabs use mvvmfx-validator
++     * ToDo: should be observable for binding of OK-button in View"
+"+    /**
++     * Inserts the JabRefPreferences-values into the the Properties of the ViewModel
++     * ToDo: Reword after conversion of all tabs: resetValues()"
+"+    /**
++     * This is called, if a user starts typing some characters into the keyboard with focus on one ListView.
++     * The ListView will scroll to the next cell with the name of the PreviewLayout fitting those characters.
++     * @param list The ListView currently focused
++     * @param keypressed The pressed character"
+"+    /**
++     * XML-Syntax-Highlighting for RichTextFX-Codearea created by (c) Carlos Martins (github: @cemartins)
++     * License: BSD-2-Clause
++     * see https://github.com/FXMisc/RichTextFX/blob/master/LICENSE and:
++     * https://github.com/FXMisc/RichTextFX/blob/master/richtextfx-demos/README.md#xml-editor
++     *
++     * @param text to parse and highlight
++     * @return highlighted span for codeArea"
+"+        final Pattern XML_TAG = Pattern.compile(""(?<ELEMENT>(</?\\h*)(\\w+)([^<>]*)(\\h*/?>))""
++                + ""|(?<COMMENT><!--[^<>]+-->)"");
++        final Pattern ATTRIBUTES = Pattern.compile(""(\\w+\\h*)(=)(\\h*\""[^\""]+\"")"");
++
++        final int GROUP_OPEN_BRACKET = 2;
++        final int GROUP_ELEMENT_NAME = 3;
++        final int GROUP_ATTRIBUTES_SECTION = 4;
++        final int GROUP_CLOSE_BRACKET = 5;
++        final int GROUP_ATTRIBUTE_NAME = 1;
++        final int GROUP_EQUAL_SYMBOL = 2;
++        final int GROUP_ATTRIBUTE_VALUE = 3;
++
++        Matcher matcher = XML_TAG.matcher(text);
++        int lastKeywordEnd = 0;
++        StyleSpansBuilder<Collection<String>> spansBuilder = new StyleSpansBuilder<>();
++        while (matcher.find()) {
++
++            spansBuilder.add(Collections.emptyList(), matcher.start() - lastKeywordEnd);
++            if (matcher.group(""COMMENT"") != null) {
++                spansBuilder.add(Collections.singleton(""comment""), matcher.end() - matcher.start());
++            } else {
++                if (matcher.group(""ELEMENT"") != null) {
++                    String attributesText = matcher.group(GROUP_ATTRIBUTES_SECTION);
++
++                    spansBuilder.add(Collections.singleton(""tagmark""), matcher.end(GROUP_OPEN_BRACKET) - matcher.start(GROUP_OPEN_BRACKET));
++                    spansBuilder.add(Collections.singleton(""anytag""), matcher.end(GROUP_ELEMENT_NAME) - matcher.end(GROUP_OPEN_BRACKET));
++
++                    if (!attributesText.isEmpty()) {
++
++                        lastKeywordEnd = 0;
++
++                        Matcher attributesMatcher = ATTRIBUTES.matcher(attributesText);
++                        while (attributesMatcher.find()) {
++                            spansBuilder.add(Collections.emptyList(), attributesMatcher.start() - lastKeywordEnd);
++                            spansBuilder.add(Collections.singleton(""attribute""), attributesMatcher.end(GROUP_ATTRIBUTE_NAME) - attributesMatcher.start(GROUP_ATTRIBUTE_NAME));
++                            spansBuilder.add(Collections.singleton(""tagmark""), attributesMatcher.end(GROUP_EQUAL_SYMBOL) - attributesMatcher.end(GROUP_ATTRIBUTE_NAME));
++                            spansBuilder.add(Collections.singleton(""avalue""), attributesMatcher.end(GROUP_ATTRIBUTE_VALUE) - attributesMatcher.end(GROUP_EQUAL_SYMBOL));
++                            lastKeywordEnd = attributesMatcher.end();
++                        }
++                        if (attributesText.length() > lastKeywordEnd) {
++                            spansBuilder.add(Collections.emptyList(), attributesText.length() - lastKeywordEnd);
++                        }
++                    }
++
++                    lastKeywordEnd = matcher.end(GROUP_ATTRIBUTES_SECTION);
++
++                    spansBuilder.add(Collections.singleton(""tagmark""), matcher.end(GROUP_CLOSE_BRACKET) - lastKeywordEnd);
++                }
++            }
++            lastKeywordEnd = matcher.end();
++        }
++        spansBuilder.add(Collections.emptyList(), text.length() - lastKeywordEnd);
++        return spansBuilder.create();
++    }
++
++    public void dragOver(DragEvent event) {
++        if (event.getDragboard().hasContent(DragAndDropDataFormats.PREVIEWLAYOUTS)) {
++            event.acceptTransferModes(TransferMode.MOVE);
++        }
++    }
++
++    public void dragDetected(ListProperty<PreviewLayout> sourceList, List<PreviewLayout> selectedLayouts, Dragboard dragboard) {
++        ClipboardContent content = new ClipboardContent();
++        content.put(DragAndDropDataFormats.PREVIEWLAYOUTS, """");
++        dragboard.setContent(content);
++        localDragboard.putPreviewLayouts(selectedLayouts);
++        dragSourceList = sourceList;
++    }
++"
+"+     */
++
++    public boolean dragDropped(ListProperty<PreviewLayout> targetList, Dragboard dragboard) {
++        boolean success = false;
++
++        if (dragboard.hasContent(DragAndDropDataFormats.PREVIEWLAYOUTS)) {
++            List<PreviewLayout> draggedLayouts = localDragboard.getPreviewLayouts();
++            if (!draggedLayouts.isEmpty()) {
++                dragSourceList.getValue().removeAll(draggedLayouts);
++                targetList.getValue().addAll(draggedLayouts);
++                success = true;
++
++                if (targetList == availableListProperty) {
++                    targetList.getValue().sort((a, b) -> a.getName().compareToIgnoreCase(b.getName()));
++                }
++            }
++        }
++
++        return success;
++    }
++"
+"+    /**
++     * Return a string for displaying a node name (and its number of children if it is a directory)."
+"+    /**
++     * Run a recursive search in a background task."
+"+    /**
++     * Parse all checked files in a background task."
+"+    /**
++     * Update the citation list depending on the selected reference."
+"+    /**
++     * Return a string for displaying an entry key and its number of uses."
+"+    /**
++     * Puts A List of {@link PreviewLayout} in the map All previous content is cleared
++     *
++     * @param previewLayouts The list to put"
+"+    /**
++     * Get a List of {@link PreviewLayout} from the dragboard
++     *
++     * @return List of PreviewLayout or empty list if no entries are avaiable"
+"+/**
++ * @implNote As CheckBoxTreeItem extends TreeItem, this class will work for both."
+"+    /**
++     * Checks if the two entries represent the same publication.
++     *
++     * @param one BibEntry
++     * @param two BibEntry
++     * @return boolean"
+"+    /**
++     * Goes through all entries in the given database, and if at least one of
++     * them is a duplicate of the given entry, as per
++     * Util.isDuplicate(BibEntry, BibEntry), the duplicate is returned.
++     * The search is terminated when the first duplicate is found.
++     *
++     * @param database The database to search.
++     * @param entry    The entry of which we are looking for duplicates.
++     * @return The first duplicate entry found. Empty Optional if no duplicates are found."
+"+    /**
++     * Return a collection of citations using a BibEntry as reference."
+"+    /**
++     * Checks if the two entries represent the same publication.
++     *
++     * @param one BibEntry
++     * @param two BibEntry
++     * @return boolean"
+"+    /**
++     * Goes through all entries in the given database, and if at least one of
++     * them is a duplicate of the given entry, as per
++     * Util.isDuplicate(BibEntry, BibEntry), the duplicate is returned.
++     * The search is terminated when the first duplicate is found.
++     *
++     * @param database The database to search.
++     * @param entry    The entry of which we are looking for duplicates.
++     * @return The first duplicate entry found. Empty Optional if no duplicates are found."
+"+    /**
++     * @param dcSchema      Metadata in DublinCore format.
++     * @param resolvedEntry The BibEntry object, which is filled during metadata extraction."
+"+    /**
++     * Returns all supported optional field names.
++     *
++     * @return a List of optional field name Strings"
+"+    /**
++     * Returns all required field names.
++     * If fields have an OR relationship the name includes both field names divided by /, e.g. author/editor.
++     * If you need all required fields as sole entities use @see{getRequiredFieldsFlat} .
++     *
++     * @return a List of required field name Strings"
+"+    /**
++     * Returns all defined fields."
+"+    /**
++     * Get list of all optional fields of this entry and their aliases."
+"+    /**
++     * Returns true if the type is a custom type, or if it is a standard type which has customized fields"
+"+    /**
++     * Sets the given custom entry types for BibTeX and biblatex mode"
+"+    /**
++     * For a given database mode, determine all custom entry types, i.e. types that are not overwritten standard types but real custom types.
++     * For example, a modified ""article"" type will not be included in the list, but an entry type like ""MyCustomType"" will be included.
++     *
++     * @param mode the BibDatabaseMode to be checked
++     * @return the list of all found custom types"
+"+    /**
++     * This method returns the BibtexEntryType for the entry type."
+"+    /**
++     * This class is used to specify entry types for either BIBTEX and BIBLATEX."
+"+        /**
++         * This method returns the BibtexEntryType for the name of a type,
++         * or null if it does not exist."
+"+    /**
++     * This type is used by the IEEEtran.bst to control the appearance of the bibliography"
+"+    /**
++     * Checks whether two EntryTypeFactory are equal or not based on the equality of the type names and on the equality of
++     * the required and optional field lists
++     *
++     * @param type1 the first EntryType to compare
++     * @param type2 the secend EntryType to compare
++     * @return returns true if the two compared entry types have the same name and equal required and optional fields"
+"+    /**
++     * Checks if the two entries represent the same publication.
++     *
++     * @param one BibEntry
++     * @param two BibEntry
++     * @return boolean"
+"+    /**
++     * Goes through all entries in the given database, and if at least one of
++     * them is a duplicate of the given entry, as per
++     * Util.isDuplicate(BibEntry, BibEntry), the duplicate is returned.
++     * The search is terminated when the first duplicate is found.
++     *
++     * @param database The database to search.
++     * @param entry    The entry of which we are looking for duplicates.
++     * @return The first duplicate entry found. Empty Optional if no duplicates are found."
+"+    /**
++     * @param dcSchema      Metadata in DublinCore format.
++     * @param resolvedEntry The BibEntry object, which is filled during metadata extraction."
+"+    /**
++     * Returns all supported optional field names.
++     *
++     * @return a List of optional field name Strings"
+"+    /**
++     * Returns all required field names.
++     * If fields have an OR relationship the name includes both field names divided by /, e.g. author/editor.
++     * If you need all required fields as sole entities use @see{getRequiredFieldsFlat} .
++     *
++     * @return a List of required field name Strings"
+"+    /**
++     * Returns all defined fields."
+"+    /**
++     * Get list of all optional fields of this entry and their aliases."
+"+    /**
++     * Returns true if the type is a custom type, or if it is a standard type which has customized fields"
+"+    /**
++     * Sets the given custom entry types for BibTeX and biblatex mode"
+"+    /**
++     * For a given database mode, determine all custom entry types, i.e. types that are not overwritten standard types but real custom types.
++     * For example, a modified ""article"" type will not be included in the list, but an entry type like ""MyCustomType"" will be included.
++     *
++     * @param mode the BibDatabaseMode to be checked
++     * @return the list of all found custom types"
+"+    /**
++     * This method returns the BibtexEntryType for the entry type."
+"+    /**
++     * This class is used to specify entry types for either BIBTEX and BIBLATEX."
+"+        /**
++         * This method returns the BibtexEntryType for the name of a type,
++         * or null if it does not exist."
+"+    /**
++     * This type is used by the IEEEtran.bst to control the appearance of the bibliography"
+"+    /**
++     * Checks whether two EntryTypeFactory are equal or not based on the equality of the type names and on the equality of
++     * the required and optional field lists
++     *
++     * @param type1 the first EntryType to compare
++     * @param type2 the secend EntryType to compare
++     * @return returns true if the two compared entry types have the same name and equal required and optional fields"
+"+    /**
++     * Parse a list of TEX files for searching a given entry.
++     *
++     * @param entryKey String that contains the entry key we are searching (null for all entries)
++     * @param texFiles List of Path objects linked to a TEX file
++     * @return a TexParserResult, which contains all data related to the bibliographic entries"
+"+    /**
++     * Return a collection of citations using a BibEntry as reference."
+"+    /**
++     * Gets a ScrollPane to display error info when recommendations fail.
++     * @return ScrollPane to display in place of recommendations"
+"+    /**
++     * This is called, if a user starts typing some characters into the keyboard with focus on one ListView.
++     * The ListView will scroll to the next cell with the name of the PreviewLayout fitting those characters.
++     * @param list The ListView currently focused
++     * @param keypressed The pressed character"
+"+    /**
++     * XML-Syntax-Highlighting for RichTextFX-Codearea created by (c) Carlos Martins (github: @cemartins)
++     * License: BSD-2-Clause
++     * see https://github.com/FXMisc/RichTextFX/blob/master/LICENSE and:
++     * https://github.com/FXMisc/RichTextFX/blob/master/richtextfx-demos/README.md#xml-editor
++     *
++     * @param text to parse and highlight
++     * @return highlighted span for codeArea"
+"+        final Pattern XML_TAG = Pattern.compile(""(?<ELEMENT>(</?\\h*)(\\w+)([^<>]*)(\\h*/?>))""
++                + ""|(?<COMMENT><!--[^<>]+-->)"");
++        final Pattern ATTRIBUTES = Pattern.compile(""(\\w+\\h*)(=)(\\h*\""[^\""]+\"")"");
++
++        final int GROUP_OPEN_BRACKET = 2;
++        final int GROUP_ELEMENT_NAME = 3;
++        final int GROUP_ATTRIBUTES_SECTION = 4;
++        final int GROUP_CLOSE_BRACKET = 5;
++        final int GROUP_ATTRIBUTE_NAME = 1;
++        final int GROUP_EQUAL_SYMBOL = 2;
++        final int GROUP_ATTRIBUTE_VALUE = 3;
++
++        Matcher matcher = XML_TAG.matcher(text);
++        int lastKeywordEnd = 0;
++        StyleSpansBuilder<Collection<String>> spansBuilder = new StyleSpansBuilder<>();
++        while (matcher.find()) {
++
++            spansBuilder.add(Collections.emptyList(), matcher.start() - lastKeywordEnd);
++            if (matcher.group(""COMMENT"") != null) {
++                spansBuilder.add(Collections.singleton(""comment""), matcher.end() - matcher.start());
++            } else {
++                if (matcher.group(""ELEMENT"") != null) {
++                    String attributesText = matcher.group(GROUP_ATTRIBUTES_SECTION);
++
++                    spansBuilder.add(Collections.singleton(""tagmark""), matcher.end(GROUP_OPEN_BRACKET) - matcher.start(GROUP_OPEN_BRACKET));
++                    spansBuilder.add(Collections.singleton(""anytag""), matcher.end(GROUP_ELEMENT_NAME) - matcher.end(GROUP_OPEN_BRACKET));
++
++                    if (!attributesText.isEmpty()) {
++
++                        lastKeywordEnd = 0;
++
++                        Matcher attributesMatcher = ATTRIBUTES.matcher(attributesText);
++                        while (attributesMatcher.find()) {
++                            spansBuilder.add(Collections.emptyList(), attributesMatcher.start() - lastKeywordEnd);
++                            spansBuilder.add(Collections.singleton(""attribute""), attributesMatcher.end(GROUP_ATTRIBUTE_NAME) - attributesMatcher.start(GROUP_ATTRIBUTE_NAME));
++                            spansBuilder.add(Collections.singleton(""tagmark""), attributesMatcher.end(GROUP_EQUAL_SYMBOL) - attributesMatcher.end(GROUP_ATTRIBUTE_NAME));
++                            spansBuilder.add(Collections.singleton(""avalue""), attributesMatcher.end(GROUP_ATTRIBUTE_VALUE) - attributesMatcher.end(GROUP_EQUAL_SYMBOL));
++                            lastKeywordEnd = attributesMatcher.end();
++                        }
++                        if (attributesText.length() > lastKeywordEnd) {
++                            spansBuilder.add(Collections.emptyList(), attributesText.length() - lastKeywordEnd);
++                        }
++                    }
++
++                    lastKeywordEnd = matcher.end(GROUP_ATTRIBUTES_SECTION);
++
++                    spansBuilder.add(Collections.singleton(""tagmark""), matcher.end(GROUP_CLOSE_BRACKET) - lastKeywordEnd);
++                }
++            }
++            lastKeywordEnd = matcher.end();
++        }
++        spansBuilder.add(Collections.emptyList(), text.length() - lastKeywordEnd);
++        return spansBuilder.create();
++    }
++
++    public void dragOver(DragEvent event) {
++        if (event.getDragboard().hasContent(DragAndDropDataFormats.PREVIEWLAYOUTS)) {
++            event.acceptTransferModes(TransferMode.MOVE);
++        }
++    }
++
++    public void dragDetected(ListProperty<PreviewLayout> sourceList, List<PreviewLayout> selectedLayouts, Dragboard dragboard) {
++        ClipboardContent content = new ClipboardContent();
++        content.put(DragAndDropDataFormats.PREVIEWLAYOUTS, """");
++        dragboard.setContent(content);
++        localDragboard.putPreviewLayouts(selectedLayouts);
++        dragSourceList = sourceList;
++    }
++"
+"+     */
++
++    public boolean dragDropped(ListProperty<PreviewLayout> targetList, Dragboard dragboard) {
++        boolean success = false;
++
++        if (dragboard.hasContent(DragAndDropDataFormats.PREVIEWLAYOUTS)) {
++            List<PreviewLayout> draggedLayouts = localDragboard.getPreviewLayouts();
++            if (!draggedLayouts.isEmpty()) {
++                dragSourceList.getValue().removeAll(draggedLayouts);
++                targetList.getValue().addAll(draggedLayouts);
++                success = true;
++
++                if (targetList == availableListProperty) {
++                    targetList.getValue().sort((a, b) -> a.getName().compareToIgnoreCase(b.getName()));
++                }
++            }
++        }
++
++        return success;
++    }
++"
+"+    /**
++     * Puts A List of {@link PreviewLayout} in the map All previous content is cleared
++     *
++     * @param previewLayouts The list to put"
+"+    /**
++     * Get a List of {@link PreviewLayout} from the dragboard
++     *
++     * @return List of PreviewLayout or empty list if no entries are avaiable"
+"+    /**
++     * Parse a list of TEX files for searching a given entry.
++     *
++     * @param entry the BibEntry we are looking for (null if we search for all entries)
++     * @param texFiles List of Path objects linked to a TEX file
++     * @return a TexParserResult, which contains all data related to the bibliographic entries"
+"+    /**
++     * Parse a list of TEX files for searching a given entry.
++     *
++     * @param entry the BibEntry we are looking for
++     * @param texFiles List of Path objects linked to a TEX file
++     * @return a TexParserResult, which contains all data related to the bibliographic entries"
+"+    /**
++     * This is called, if a user starts typing some characters into the keyboard with focus on one ListView.
++     * The ListView will scroll to the next cell with the name of the PreviewLayout fitting those characters.
++     * @param list The ListView currently focused
++     * @param keypressed The pressed character"
+"+    /**
++     * XML-Syntax-Highlighting for RichTextFX-Codearea created by (c) Carlos Martins (github: @cemartins)
++     * License: BSD-2-Clause
++     * see https://github.com/FXMisc/RichTextFX/blob/master/LICENSE and:
++     * https://github.com/FXMisc/RichTextFX/blob/master/richtextfx-demos/README.md#xml-editor
++     *
++     * @param text to parse and highlight
++     * @return highlighted span for codeArea"
+"+        final Pattern XML_TAG = Pattern.compile(""(?<ELEMENT>(</?\\h*)(\\w+)([^<>]*)(\\h*/?>))""
++                + ""|(?<COMMENT><!--[^<>]+-->)"");
++        final Pattern ATTRIBUTES = Pattern.compile(""(\\w+\\h*)(=)(\\h*\""[^\""]+\"")"");
++
++        final int GROUP_OPEN_BRACKET = 2;
++        final int GROUP_ELEMENT_NAME = 3;
++        final int GROUP_ATTRIBUTES_SECTION = 4;
++        final int GROUP_CLOSE_BRACKET = 5;
++        final int GROUP_ATTRIBUTE_NAME = 1;
++        final int GROUP_EQUAL_SYMBOL = 2;
++        final int GROUP_ATTRIBUTE_VALUE = 3;
++
++        Matcher matcher = XML_TAG.matcher(text);
++        int lastKeywordEnd = 0;
++        StyleSpansBuilder<Collection<String>> spansBuilder = new StyleSpansBuilder<>();
++        while (matcher.find()) {
++
++            spansBuilder.add(Collections.emptyList(), matcher.start() - lastKeywordEnd);
++            if (matcher.group(""COMMENT"") != null) {
++                spansBuilder.add(Collections.singleton(""comment""), matcher.end() - matcher.start());
++            } else {
++                if (matcher.group(""ELEMENT"") != null) {
++                    String attributesText = matcher.group(GROUP_ATTRIBUTES_SECTION);
++
++                    spansBuilder.add(Collections.singleton(""tagmark""), matcher.end(GROUP_OPEN_BRACKET) - matcher.start(GROUP_OPEN_BRACKET));
++                    spansBuilder.add(Collections.singleton(""anytag""), matcher.end(GROUP_ELEMENT_NAME) - matcher.end(GROUP_OPEN_BRACKET));
++
++                    if (!attributesText.isEmpty()) {
++
++                        lastKeywordEnd = 0;
++
++                        Matcher attributesMatcher = ATTRIBUTES.matcher(attributesText);
++                        while (attributesMatcher.find()) {
++                            spansBuilder.add(Collections.emptyList(), attributesMatcher.start() - lastKeywordEnd);
++                            spansBuilder.add(Collections.singleton(""attribute""), attributesMatcher.end(GROUP_ATTRIBUTE_NAME) - attributesMatcher.start(GROUP_ATTRIBUTE_NAME));
++                            spansBuilder.add(Collections.singleton(""tagmark""), attributesMatcher.end(GROUP_EQUAL_SYMBOL) - attributesMatcher.end(GROUP_ATTRIBUTE_NAME));
++                            spansBuilder.add(Collections.singleton(""avalue""), attributesMatcher.end(GROUP_ATTRIBUTE_VALUE) - attributesMatcher.end(GROUP_EQUAL_SYMBOL));
++                            lastKeywordEnd = attributesMatcher.end();
++                        }
++                        if (attributesText.length() > lastKeywordEnd) {
++                            spansBuilder.add(Collections.emptyList(), attributesText.length() - lastKeywordEnd);
++                        }
++                    }
++
++                    lastKeywordEnd = matcher.end(GROUP_ATTRIBUTES_SECTION);
++
++                    spansBuilder.add(Collections.singleton(""tagmark""), matcher.end(GROUP_CLOSE_BRACKET) - lastKeywordEnd);
++                }
++            }
++            lastKeywordEnd = matcher.end();
++        }
++        spansBuilder.add(Collections.emptyList(), text.length() - lastKeywordEnd);
++        return spansBuilder.create();
++    }
++
++    public void dragOver(DragEvent event) {
++        if (event.getDragboard().hasContent(DragAndDropDataFormats.PREVIEWLAYOUTS)) {
++            event.acceptTransferModes(TransferMode.MOVE);
++        }
++    }
++
++    public void dragDetected(ListProperty<PreviewLayout> sourceList, List<PreviewLayout> selectedLayouts, Dragboard dragboard) {
++        ClipboardContent content = new ClipboardContent();
++        content.put(DragAndDropDataFormats.PREVIEWLAYOUTS, """");
++        dragboard.setContent(content);
++        localDragboard.putPreviewLayouts(selectedLayouts);
++        dragSourceList = sourceList;
++    }
++"
+"+     */
++
++    public boolean dragDropped(ListProperty<PreviewLayout> targetList, Dragboard dragboard) {
++        boolean success = false;
++
++        if (dragboard.hasContent(DragAndDropDataFormats.PREVIEWLAYOUTS)) {
++            List<PreviewLayout> draggedLayouts = localDragboard.getPreviewLayouts();
++            if (!draggedLayouts.isEmpty()) {
++                dragSourceList.getValue().removeAll(draggedLayouts);
++                targetList.getValue().addAll(draggedLayouts);
++                success = true;
++
++                if (targetList == availableListProperty) {
++                    targetList.getValue().sort((a, b) -> a.getName().compareToIgnoreCase(b.getName()));
++                }
++            }
++        }
++
++        return success;
++    }
++"
+"+    /**
++     * Return a string for displaying a node name (and its number of children if it is a directory)."
+"+    /**
++     * Run a recursive search in a background task."
+"+    /**
++     * Parse all checked files in a background task."
+"+    /**
++     * Update the citation list depending on the selected reference."
+"+    /**
++     * Return a string for displaying an entry key and its number of uses."
+"+    /**
++     * Puts A List of {@link PreviewLayout} in the map All previous content is cleared
++     *
++     * @param previewLayouts The list to put"
+"+    /**
++     * Get a List of {@link PreviewLayout} from the dragboard
++     *
++     * @return List of PreviewLayout or empty list if no entries are avaiable"
+"+/**
++ * @implNote As CheckBoxTreeItem extends TreeItem, this class will work for both."
+"+    /**
++     * It is allowed to add new cite commands for pattern matching.
++     *
++     * <p>Some valid examples: ""citep"", ""[cC]ite"", ""[cC]ite(author|title|year|t|p)?""
++     *
++     * <p>TODO: Add support for multicite commands."
+"+    /**
++     * Find cites along a specific line and store them."
+"+    /**
++     * Find inputs and includes along a specific line and store them for parsing later."
+"+    /**
++     * Look for BibTeX entries within the reference database for all keys inside of the TEX files.
++     * Insert these data in the list of new entries."
+"+    /**
++     * Find cross references for inserting into the list of new entries."
+"+    /**
++     * The total number of characters that are shown around a cite (cite width included)."
+"+    /**
++     * Get a fixed-width string that contains a cite and the text that surrounds it along the same line."
+"+    /**
++     * Return the citations multimap from the TexParserResult object."
+"+    /**
++     * Return a set of strings with the keys of the citations multimap from the TexParserResult object."
+"+    /**
++     * Add an unresolved key to the list."
+"+    /**
++     * Check if an entry with the given key is present in the list of new entries."
+"+    /**
++     * Add 1 to the cross references counter."
+"+    /**
++     * Insert into the list of new entries an entry with the given key."
+"+    /**
++     * Insert into the list of new entries the given entry."
+"+    /**
++     * For testing purposes.
++     *
++     * @param citeString String that contains a citation
++     * @return a TexParserResult, where Path is foo/bar and lineNumber is 1"
+"+    /**
++     * Parse a single TEX file.
++     *
++     * @param texFile Path to a TEX file
++     * @return a TexParserResult, which contains all data related to the bibliographic entries"
+"+    /**
++     * Parse a list of TEX files.
++     *
++     * @param texFiles List of Path objects linked to a TEX file
++     * @return a TexParserResult, which contains all data related to the bibliographic entries"
+"+    /**
++     * Return a set of strings with the keys of the citations multimap."
+"+    /**
++     * Return a collection of citations using a string as key reference."
+"+    /**
++     * Add a list of files to fileList or nestedFiles, depending on whether this is the first list."
+"+    /**
++     * Add a citation to the citations multimap."
+"+    /**
++     * Return a collection of citations using a BibEntry as reference."
+"+    /**
++     * This is called, if a user starts typing some characters into the keyboard with focus on one ListView.
++     * The ListView will scroll to the next cell with the name of the PreviewLayout fitting those characters.
++     * @param list The ListView currently focused
++     * @param keypressed The pressed character"
+"+    /**
++     * XML-Syntax-Highlighting for RichTextFX-Codearea created by (c) Carlos Martins (github: @cemartins)
++     * License: BSD-2-Clause
++     * see https://github.com/FXMisc/RichTextFX/blob/master/LICENSE and:
++     * https://github.com/FXMisc/RichTextFX/blob/master/richtextfx-demos/README.md#xml-editor
++     *
++     * @param text to parse and highlight
++     * @return highlighted span for codeArea"
+"+        final Pattern XML_TAG = Pattern.compile(""(?<ELEMENT>(</?\\h*)(\\w+)([^<>]*)(\\h*/?>))""
++                + ""|(?<COMMENT><!--[^<>]+-->)"");
++        final Pattern ATTRIBUTES = Pattern.compile(""(\\w+\\h*)(=)(\\h*\""[^\""]+\"")"");
++
++        final int GROUP_OPEN_BRACKET = 2;
++        final int GROUP_ELEMENT_NAME = 3;
++        final int GROUP_ATTRIBUTES_SECTION = 4;
++        final int GROUP_CLOSE_BRACKET = 5;
++        final int GROUP_ATTRIBUTE_NAME = 1;
++        final int GROUP_EQUAL_SYMBOL = 2;
++        final int GROUP_ATTRIBUTE_VALUE = 3;
++
++        Matcher matcher = XML_TAG.matcher(text);
++        int lastKeywordEnd = 0;
++        StyleSpansBuilder<Collection<String>> spansBuilder = new StyleSpansBuilder<>();
++        while (matcher.find()) {
++
++            spansBuilder.add(Collections.emptyList(), matcher.start() - lastKeywordEnd);
++            if (matcher.group(""COMMENT"") != null) {
++                spansBuilder.add(Collections.singleton(""comment""), matcher.end() - matcher.start());
++            } else {
++                if (matcher.group(""ELEMENT"") != null) {
++                    String attributesText = matcher.group(GROUP_ATTRIBUTES_SECTION);
++
++                    spansBuilder.add(Collections.singleton(""tagmark""), matcher.end(GROUP_OPEN_BRACKET) - matcher.start(GROUP_OPEN_BRACKET));
++                    spansBuilder.add(Collections.singleton(""anytag""), matcher.end(GROUP_ELEMENT_NAME) - matcher.end(GROUP_OPEN_BRACKET));
++
++                    if (!attributesText.isEmpty()) {
++
++                        lastKeywordEnd = 0;
++
++                        Matcher attributesMatcher = ATTRIBUTES.matcher(attributesText);
++                        while (attributesMatcher.find()) {
++                            spansBuilder.add(Collections.emptyList(), attributesMatcher.start() - lastKeywordEnd);
++                            spansBuilder.add(Collections.singleton(""attribute""), attributesMatcher.end(GROUP_ATTRIBUTE_NAME) - attributesMatcher.start(GROUP_ATTRIBUTE_NAME));
++                            spansBuilder.add(Collections.singleton(""tagmark""), attributesMatcher.end(GROUP_EQUAL_SYMBOL) - attributesMatcher.end(GROUP_ATTRIBUTE_NAME));
++                            spansBuilder.add(Collections.singleton(""avalue""), attributesMatcher.end(GROUP_ATTRIBUTE_VALUE) - attributesMatcher.end(GROUP_EQUAL_SYMBOL));
++                            lastKeywordEnd = attributesMatcher.end();
++                        }
++                        if (attributesText.length() > lastKeywordEnd) {
++                            spansBuilder.add(Collections.emptyList(), attributesText.length() - lastKeywordEnd);
++                        }
++                    }
++
++                    lastKeywordEnd = matcher.end(GROUP_ATTRIBUTES_SECTION);
++
++                    spansBuilder.add(Collections.singleton(""tagmark""), matcher.end(GROUP_CLOSE_BRACKET) - lastKeywordEnd);
++                }
++            }
++            lastKeywordEnd = matcher.end();
++        }
++        spansBuilder.add(Collections.emptyList(), text.length() - lastKeywordEnd);
++        return spansBuilder.create();
++    }
++
++    public void dragOver(DragEvent event) {
++        if (event.getDragboard().hasContent(DragAndDropDataFormats.PREVIEWLAYOUTS)) {
++            event.acceptTransferModes(TransferMode.MOVE);
++        }
++    }
++
++    public void dragDetected(ListProperty<PreviewLayout> sourceList, List<PreviewLayout> selectedLayouts, Dragboard dragboard) {
++        ClipboardContent content = new ClipboardContent();
++        content.put(DragAndDropDataFormats.PREVIEWLAYOUTS, """");
++        dragboard.setContent(content);
++        localDragboard.putPreviewLayouts(selectedLayouts);
++        dragSourceList = sourceList;
++    }
++"
+"+     */
++
++    public boolean dragDropped(ListProperty<PreviewLayout> targetList, Dragboard dragboard) {
++        boolean success = false;
++
++        if (dragboard.hasContent(DragAndDropDataFormats.PREVIEWLAYOUTS)) {
++            List<PreviewLayout> draggedLayouts = localDragboard.getPreviewLayouts();
++            if (!draggedLayouts.isEmpty()) {
++                dragSourceList.getValue().removeAll(draggedLayouts);
++                targetList.getValue().addAll(draggedLayouts);
++                success = true;
++
++                if (targetList == availableListProperty) {
++                    targetList.getValue().sort((a, b) -> a.getName().compareToIgnoreCase(b.getName()));
++                }
++            }
++        }
++
++        return success;
++    }
++"
+"+    /**
++     * Puts A List of {@link PreviewLayout} in the map All previous content is cleared
++     *
++     * @param previewLayouts The list to put"
+"+    /**
++     * Get a List of {@link PreviewLayout} from the dragboard
++     *
++     * @return List of PreviewLayout or empty list if no entries are avaiable"
+"+    /**
++     * Return a string for displaying a node name (and its number of children if it is a directory)."
+"+    /**
++     * Run a recursive search in a background task."
+"+    /**
++     * Parse all checked files in a background task."
+"+    /**
++     * Update the citation list depending on the selected reference."
+"+    /**
++     * Return a string for displaying an entry key and its number of uses."
+"+/**
++ * @implNote As CheckBoxTreeItem extends TreeItem, this class will work for both."
+"+    /**
++     * It is allowed to add new cite commands for pattern matching.
++     *
++     * <p>Some valid examples: ""citep"", ""[cC]ite"", ""[cC]ite(author|title|year|t|p)?""
++     *
++     * <p>TODO: Add support for multicite commands."
+"+    /**
++     * Find cites along a specific line and store them."
+"+    /**
++     * Find inputs and includes along a specific line and store them for parsing later."
+"+    /**
++     * Look for BibTeX entries within the reference database for all keys inside of the TEX files.
++     * Insert these data in the list of new entries."
+"+    /**
++     * Find cross references for inserting into the list of new entries."
+"+    /**
++     * The total number of characters that are shown around a cite (cite width included)."
+"+    /**
++     * Get a fixed-width string that contains a cite and the text that surrounds it along the same line."
+"+    /**
++     * Return the citations multimap from the TexParserResult object."
+"+    /**
++     * Return a set of strings with the keys of the citations multimap from the TexParserResult object."
+"+    /**
++     * Add an unresolved key to the list."
+"+    /**
++     * Check if an entry with the given key is present in the list of new entries."
+"+    /**
++     * Add 1 to the cross references counter."
+"+    /**
++     * Insert into the list of new entries an entry with the given key."
+"+    /**
++     * Insert into the list of new entries the given entry."
+"+    /**
++     * For testing purposes.
++     *
++     * @param citeString String that contains a citation
++     * @return a TexParserResult, where Path is foo/bar and lineNumber is 1"
+"+    /**
++     * Parse a single TEX file.
++     *
++     * @param texFile Path to a TEX file
++     * @return a TexParserResult, which contains all data related to the bibliographic entries"
+"+    /**
++     * Parse a list of TEX files.
++     *
++     * @param texFiles List of Path objects linked to a TEX file
++     * @return a TexParserResult, which contains all data related to the bibliographic entries"
+"+    /**
++     * Return a set of strings with the keys of the citations multimap."
+"+    /**
++     * Return a collection of citations using a string as key reference."
+"+    /**
++     * Add a list of files to fileList or nestedFiles, depending on whether this is the first list."
+"+    /**
++     * Add a citation to the citations multimap."
+"+/**
++ * Fetcher for ISBN using https://www.ottobib.com"
+"+    /**
++     * @return null, because the identifier is passed using form data. This method is not used."
+"+    /**
++     * Return a string for displaying a node name (and its number of children if it is a directory)."
+"+    /**
++     * Run a recursive search in a background task."
+"+    /**
++     * Parse all checked files in a background task."
+"+    /**
++     * Update the citation list depending on the selected reference."
+"+    /**
++     * Return a string for displaying an entry key and its number of uses."
+"+/**
++ * @implNote As CheckBoxTreeItem extends TreeItem, this class will work for both."
+"+    /**
++     * Return a collection of citations using a string as key reference."
+"+    /**
++     * Return the citations multimap from the TexParserResult object."
+"+    /**
++     * Return a set of strings with the keys of the citations multimap from the TexParserResult object."
+"+    /**
++     * Add an unresolved key to the list."
+"+    /**
++     * Check if an entry with the given key is present in the list of new entries."
+"+    /**
++     * Add 1 to the cross references counter."
+"+    /**
++     * Insert into the list of new entries an entry with the given key."
+"+    /**
++     * Insert into the list of new entries the given entry."
+"+    /**
++     * Return a set of strings with the keys of the citations multimap."
+"+    /**
++     * Return the citations map from the TexParserResult object."
+"+    /**
++     * Return a set of strings with the keys of the citations map from the TexParserResult object."
+"+    /**
++     * Return the master database in a set, for comparing two objects."
+"+    /**
++     * Get if an entry with the given key is present in the master database."
+"+    /**
++     * Add an unresolved key to the list."
+"+    /**
++     * Return the new database in a set, for comparing two objects."
+"+    /**
++     * Check if an entry with the given key is present in the new database."
+"+    /**
++     * Add 1 to cross references counter."
+"+    /**
++     * Insert into the database a clone of an entry with the given key. The cloned entry has a new unique ID."
+"+    /**
++     * Insert into the database a clone of the given entry. The cloned entry has a new unique ID."
+"+    /**
++     * Add a list of files to fileList or nestedFiles, depending on whether this is the first list."
+"+    /**
++     * Add a citation to the citations map. It puts a new key into the map if does not exist yet."
+"+    /**
++     * Look for an equivalent BibTeX entry within the reference database for all keys inside of the TEX files."
+"+    /**
++     * Find cross references for inserting into the new database."
+"+    /**
++     * Insert into the database a clone of the given entry. The cloned entry has a new unique ID."
+"+    /**
++     * Look for an equivalent BibTeX entry within the reference database for all keys inside of the TEX files."
+"+    /**
++     * Insert into the database a clone of the given entry. The cloned entry has a new unique ID."
+"+    /**
++     * Parse a list of TEX files and, recursively, their referenced files."
+"+    /**
++            String[] keys = citeMatch.group(""key"").split("","");"
+"+     */
++    private void matchNestedFile(TexParserResult result, Path file, List<Path> texFiles, List<Path> referencedFiles, String line) {
++            String include = includeMatch.group(""file"");
++
++            if (!include.endsWith("".tex"")) {
++                include += "".tex"";
++            }
++            Path folder = file.getParent();
++            Path inputFile = (folder != null)
++                    ? folder.resolve(include)
++                    : Paths.get(include);
++            if (!texFiles.contains(inputFile)) {
++                referencedFiles.add(inputFile);
++                result.increaseNestedFilesCounter();"
+"+    /**
+@@ -142,7 +166,7 @@ private void resolveTags(TexParserResult result) {
++                    CrossReferences.resolve(masterDatabase, result, entry.get());
+@@ -156,22 +180,7 @@ private void resolveTags(TexParserResult result) {"
+"+     */
++    TexParserResult parse(String citeString);
++"
+"+    /**
++     * It is allowed to add new cite commands for pattern matching."
+"+     */
++    private void matchCitation(TexParserResult result, Path file, int lineNumber, String line) {
++        Matcher citeMatch = Pattern.compile(CITE_REGEX).matcher(line);
++
++        while (citeMatch.find()) {
++            String[] keys = citeMatch.group(1).split("","");
++
++            for (String key : keys) {
++                addKey(result, key.trim(), new Citation(file, lineNumber, citeMatch.start(), citeMatch.end(), line));
++            }
++        }
++    }
++
++    /*
++     * Add a citation to the uniqueKeys map."
+"+     */
++    private void resolveTags(TexParserResult result) {
++        Set<String> keySet = result.getUniqueKeys().keySet();
++
++        for (String key : keySet) {
++            if (!result.getGeneratedBibDatabase().getEntryByKey(key).isPresent()) {
++                Optional<BibEntry> entry = masterDatabase.getEntryByKey(key);
++
++                if (entry.isPresent()) {
++                    insertEntry(result, entry.get());
++                } else {
++                    result.getUnresolvedKeys().add(key);
++                }
++            }
++        }
++
++        // Copy database definitions
++        if (result.getGeneratedBibDatabase().hasEntries()) {
++            result.getGeneratedBibDatabase().copyPreamble(masterDatabase);
++            result.insertStrings(masterDatabase.getUsedStrings(result.getGeneratedBibDatabase().getEntries()));
++        }
++    }
++
++    /*
++     * Insert into the database a clone of the given entry. The cloned entry has a new unique ID."
+"+    /**
++     * The total number of characters that are shown around a cite (cite width included)."
+"+    /**
++     * @return String that contains a cite and the text that surrounds it along the same line."
+"+    /**
++     * @param texFile Path to a TEX file
++     * @return a TexParserResult, which contains the generated BibDatabase and all data related to the bibliographic
++     * entries"
+"+    /**
++     * @param texFiles List of Path objects linked to a TEX file
++     * @return a list of TexParserResult objects, which contains the generated BibDatabase and all data related to the
++     * bibliographic entries"
+"+    /**
++     * Gets a ScrollPane to display error info when recommendations fail.
++     * @return ScrollPane to display in place of recommendations"
+"+    /**
++     * Return a string for displaying a node name (and its number of children if it is a directory)."
+"+    /**
++     * Run a recursive search in a background task."
+"+    /**
++     * Parse all checked files in a background task."
+"+    /**
++     * Update the citation list depending on the selected reference."
+"+    /**
++     * Return a string for displaying an entry key and its number of uses."
+"+/**
++ * @implNote As CheckBoxTreeItem extends TreeItem, this class will work for both."
+"+    /**
++     * Return a collection of citations using a string as key reference."
+"+    /**
++     * Gets a ScrollPane to display error info when recommendations fail.
++     * @return ScrollPane to display in place of recommendations"
+"+    /**
++     * This is called, if a user starts typing some characters into the keyboard with focus on one ListView.
++     * The ListView will scroll to the next cell with the name of the PreviewLayout fitting those characters.
++     * @param list The ListView currently focused
++     * @param keypressed The pressed character"
+"+    /**
++     * Is called, when the user drops some PreviewLayouts either in the availableListView or in the empty space of
++     * chosenListView
++     *
++     * @param targetList either availableListView or chosenListView"
+"+    /**
++     * This is called, when the user drops some PreviewLayouts on another cell to sort them
++     *
++     * @param targetLayout the Layout, the user drops a layout on"
+"+    /**
++     * Puts A List of {@link PreviewLayout} in the map All previous content is cleared
++     *
++     * @param previewLayouts The list to put"
+"+    /**
++     * Get a List of {@link PreviewLayout} from the dragboard
++     *
++     * @return List of BibEntry or empty list if no entries are avaiable"

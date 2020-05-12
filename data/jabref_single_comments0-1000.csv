@@ -1,0 +1,1555 @@
+"// Not needed for connection, but stored for future login"
+// Some DBMS require a non-null value as a password (in case of using an empty string).
+// Calling dbmsProcessor.setupSharedDatabase() lets dbmsProcessor.checkBaseIntegrity() be true.
+// copy remote values to local entry
+"// in case entries should be added into the local database, insert them"
+// remove all non-shared entries without triggering listeners
+"//localhost:3108/jabref"", connectionProperties.getUrl());"
+// shared updates are not synchronized back to the remote database
+"// use a second connection, because this is another client (typically on another machine)"
+// client A inserts an entry
+// client A changes the entry
+// client B pulls the changes
+// client A inserts an entry
+// client B pulls the entry
+// A now increases the version number
+// B also tries to change something
+"//We have to use a new instance here, because otherwise only the first entry gets parsed"
+"//dx.doi.org/10.1155/2014/217495\"","""
+"//dx.doi.org/10.1155/2014/217495\"",\""type\"":\""fulltext\""}],\""year\"":\""2014\"",\""identifier\"":[{\""type\"":\""pissn\"",\""id\"":\""1065-514X\""},{\""type\"":\""eissn\"",\""id\"":\""1563-5171\""},{\""type\"":\""doi\"",\""id\"":\""10.1155/2014/217495\""}],\""created_date\"":\""2014-05-09T19:38:31Z\""}"";"
+"//dash.harvard.edu/bitstream/1/12285462/1/Nanometer-Scale%20Thermometry.pdf"")), finder.findFullText(entry));"
+"//We have to use a new instance here, because otherwise only the first entry gets parsed"
+// Parse the modified file
+// Added/removed externally.
+"// may throw an IOException. Thus, we do not use ""ifPresent"", but the ""old"" isPresent way"
+"// In case a ""thenReturn"" is modified, the whole mock has to be recreated"
+// @formatter:off
+// @formatter:on
+// read in bibtex string
+// modify entry
+// modify entry a second time
+// write a second time
+// @formatter:off
+// @formatter:on
+// read in bibtex string
+// modify entry
+// flag unchanged
+// write entry
+// @formatter:off
+// @formatter:on
+// read in bibtex string
+// modify entry
+// modify entry a second time
+// write a second time
+"// returns tu original entry, not to the last saved one"
+"// ""field:"""
+"//dash.harvard.edu/bitstream/1/12285462/1/Nanometer-Scale%20Thermometry.pdf"")), finder.findFullText(entry));"
+"//dx.doi.org/10.1155/2014/217495\"","""
+"//dx.doi.org/10.1155/2014/217495\"",\""type\"":\""fulltext\""}],\""year\"":\""2014\"",\""identifier\"":[{\""type\"":\""pissn\"",\""id\"":\""1065-514X\""},{\""type\"":\""eissn\"",\""id\"":\""1563-5171\""},{\""type\"":\""doi\"",\""id\"":\""10.1155/2014/217495\""}],\""created_date\"":\""2014-05-09T19:38:31Z\""}"";"
+// Remove the first and third entries - the second should remain (SHARED_ID will be 2)
+//TODO: Second and third entry are not parsed
+// Download and link full text
+// write out bibtex string
+// enable writing
+// enable writing
+// Run SplitPane.setResizableWithParent later to avoid miscalculation during initial layouting
+// nothing found at ebook.de: try ottobib
+// nothing found at ebook.de: try ottobib
+"//docs.jabref.org/"");"
+"//github.com/JabRef/user-documentation"">user-documentation@github</a>"
+// empty string denotes that it refers to the TOC/index
+// this is always the index
+"//docs.jabref.org/import-export/medlineris"">docs.jabref.org</a> for a detailed documentation of the available fields."
+"//docs.jabref.org/fields/strings"">Strings help</a> of JabRef."
+"//docs.jabref.org/"";"
+"//dash.harvard.edu/bitstream/1/12285462/Nanometer-Scale%20Thermometry.pdf?sequence=1"")), finder.findFullText(entry));"
+// source of the example: https://docs.jabref.org/fields/strings
+// source of the example: https://docs.jabref.org/fields/strings
+// source of the example: https://docs.jabref.org/fields/strings
+// Source of the example: https://docs.jabref.org/fields/strings
+// Source of the example: https://docs.jabref.org/fields/strings
+// Source of the example: https://docs.jabref.org/fields/strings
+// Source of the example: https://docs.jabref.org/fields/strings
+// parse keywords field
+// parse JEL field
+// parse URL field
+// parse authors field
+"// first extract ""bibtex/"" entries"
+"// then extract all ""standard"" dublin core entries"
+"//github.com/JabRef/jabref/issues/263#issuecomment-151246595"">Issue 263</a> for a discussion on that thing."
+"//help.jabref.org/en/Strings"">Strings help</a> of JabRef."
+"//localhost:5432/xe"", DBMSType.POSTGRESQL.getUrl(""localhost"", 5432, ""xe""));"
+// This method is not able to close the bottom pane currently
+// Redo the change.
+"// While synchronizing the local database (see synchronizeLocalDatabase() below), some EntriesEvents may be posted."
+"// While synchronizing the local database (see synchronizeLocalDatabase() below), some EntriesEvents may be posted."
+// This has not been made parallel yet - hence the for loop - that will take more effort
+"// While synchronizing the local database (see synchronizeLocalDatabase() below), some EntriesEvents may be posted."
+// copy remote values to local entry
+// Should not reach the listeners above.
+"//Temporary fix, while we change to plural entries"
+// add some additional space to improve appearance
+// add some additional space to improve appearance
+// Only one linked file -> open directly
+// By default the rawColumnName is parsed as NORMALFIELD
+// Width of Ranking Icon Column
+"// ""field:"""
+// File linking Options for entry editor
+// String delimiter
+// true if a STRINGLIST_DELIMITER is found
+// init paste handler for UrlEditor to format pasted url link in textArea
+"// unescape the the contents of the URL field, e.g., some\_url\_part becomes some_url_part"
+"// \\ --> first \ begins the command, second \ ends the command"
+"// \latexommand\\ -> \latexcommand is the command, terminated by \, which begins a new command"
+// do not append the opening brace of a command parameter
+// do not append the whitespace character
+// eat up all whitespace characters
+"//pi.informatik.uni-siegen.de/stt/36\\_2/./03\\_Technische\\_Beitraege/ZEUS2016/beitrag\\_2.pdf"", formatter.format(""http://pi.informatik.uni-siegen.de/stt/36\\_2/./03\\_Technische\\_Beitraege/ZEUS2016/beitrag\\_2.pdf""));"
+// the caller has to pay attention that this does not happen
+"//www.focus.de/"" +"
+"//pi.informatik.uni-siegen.de/stt/36_2/./03_Technische_Beitraege/ZEUS2016/beitrag_2.pdf"", formatter.format(""http://pi.informatik.uni-siegen.de/stt/36\\_2/./03\\_Technische\\_Beitraege/ZEUS2016/beitrag\\_2.pdf""));"
+// Never null
+"// Unknown, cannot abbreviate anything."
+// Cannot do anything if it is not known.
+// Cannot unabbreviate unabbreviated name.
+// Must be here.
+// Check name and abbreviation
+// Journal initialization
+// The order of reading the journal lists is important: last added abbreviation wins
+"// For instance, in the personal list one can overwrite abbreviations in the built in list"
+// Read IEEE list
+// We have over 15.000 abbreviations in the built-in lists
+// should result in 4 real abbreviations and one pseudo abbreviation
+// our test file has 3 abbreviations and one pseudo abbreviation
+// simulate open file button twice
+// size of the list of journal files should be incremented by two
+// our second test file has 4 abbreviations
+// check some abbreviation
+// simulate add new file button
+// size of the list of journal files should be incremented by one
+// a new file has zero abbreviations
+// simulate open file button
+// size of the list of journal files should be incremented by one
+// check some abbreviation
+"// test if the last opened file is active, but duplicated entry has been removed"
+// test if the current abbreviations matches with the ones in testFile1Entries
+// check if the previous (the last) element is the current abbreviation
+// should result in 4 real abbreviations and one pseudo abbreviation
+// our test file has 3 abbreviations and one pseudo abbreviation
+// simulate open file button twice
+// size of the list of journal files should be incremented by two
+// our second test file has 4 abbreviations
+// check some abbreviation
+// simulate add new file button
+// size of the list of journal files should be incremented by one
+// a new file has zero abbreviations
+// simulate open file button
+// size of the list of journal files should be incremented by one
+// check some abbreviation
+"// test if the last opened file is active, but duplicated entry has been removed"
+// test if the current abbreviations matches with the ones in testFile1Entries
+// check if the previous (the last) element is the current abbreviation
+// copy remote values to local entry
+// locally remove not existing fields
+// used in old versions of JabRef. Currently used for conversion only
+"// all field names starting with ""Jabref-internal-"" are not appearing in .bib files"
+// marker that the content is just a BibTeX string
+"// virtual field to denote ""all fields"". Used in the meta data serialiization for save actions."
+"// virtual field to denote ""all text fields"". Used in the meta data serialiization for save actions."
+//set an required OR field (author/editor)
+//set an optional field
+// @formatter:off
+// @formatter:on
+// source of the example: https://github.com/JabRef/help.jabref.org/blob/gh-pages/en/Strings.md
+// source of the example: https://github.com/JabRef/help.jabref.org/blob/gh-pages/en/Strings.md
+// source of the example: https://github.com/JabRef/help.jabref.org/blob/gh-pages/en/Strings.md
+// Instantiate
+// Instantiate
+// Instantiate
+// Instantiate
+// Source of the example: https://help.jabref.org/en/Strings
+// Source of the example: https://help.jabref.org/en/Strings
+// Source of the example: https://help.jabref.org/en/Strings
+// Source of the example: https://help.jabref.org/en/Strings
+// Number of results
+"//uriBuilder.addParameter(""page"", ""1""); // Page (not needed so far)"
+"//bibtex.chimbori.com/isbn-bibtex"")"
+//dev.elsevier.com/'
+"//www.google.com"")"
+//shortdoi.org'
+// Number of results
+"//uriBuilder.addParameter(""page"", ""1""); // Page (not needed so far)"
+"//bibtex.chimbori.com/isbn-bibtex"")"
+//dev.elsevier.com/'
+"//www.google.com"")"
+//shortdoi.org'
+"//ui.adsabs.harvard.edu/abs/2018arXiv181204698D"");"
+"//ui.adsabs.harvard.edu/abs/2012LRR....15...10F"");"
+"//ui.adsabs.harvard.edu/abs/2012NatMa..11...44S"");"
+"//ui.adsabs.harvard.edu/abs/2007ITGRS..45..879X"");"
+"//ui.adsabs.harvard.edu/abs/1982Icar...52...62I"");"
+"//ui.adsabs.harvard.edu/abs/2000JGR...10520297L"");"
+// Remove ADS note
+// Move adsurl to url field
+// The fetcher adds some garbage (number of found entries etc before)
+"//adsabs.harvard.edu/abs/2014arXiv1405.2249D"");"
+"//adsabs.harvard.edu/abs/2012LRR....15...10F"");"
+"//adsabs.harvard.edu/abs/2012NatMa..11...44S"");"
+"//adsabs.harvard.edu/abs/2007ITGRS..45..879X"");"
+"//adsabs.harvard.edu/abs/1982Icar...52...62I"");"
+"//adsabs.harvard.edu/abs/2000JGR...10520297L"");"
+//Remove abstract due to copyright
+//Remove abstract due to copyright
+"//api.adsabs.harvard.edu/v1/search/query"";"
+"//api.adsabs.harvard.edu/v1/export/bibtexabs"";"
+// Post-cleanup
+//TODO Replace Old ADS after the new one is mature
+//www.adsabs.harvard.edu/)
+//adsabs.harvard.edu/basic_search.html Entry -based: http://adsabs.harvard.edu/abstract_service.html
+//github.com/adsabs/adsabs-dev-api) but it returns JSON (or at least needs multiple
+"//api.adsabs.harvard.edu/v1/search/query"";"
+"//api.adsabs.harvard.edu/v1/export/bibtexabs"";"
+//TODO Add API Token
+// Post-cleanup
+// Invalid regular expression
+"//www.uninformativ.de/blog/postings/2017-04-02/0/POSTING-en.html"">Short summary for X11 clipboards</a>"
+"//unix.stackexchange.com/questions/139191/whats-the-difference-between-primary-selection-and-clipboard-buffer/139193#139193"">Longer text over clipboards</a>"
+// new customization
+// different customization
+// new customization
+// different customization
+//required fields
+//optional fields
+//unknown fields
+// @formatter:off
+// @formatter:on
+// Just to make sure that we are staying under the total table width (due to rounding errors)
+//ui.adsabs.harvard.edu/)
+"//api.adsabs.harvard.edu/v1/search/query"";"
+"//api.adsabs.harvard.edu/v1/export/bibtexabs"";"
+// Search astronomy + physics + arXiv db
+// Remove ADS note
+// Move adsurl to url field
+// The fetcher adds some garbage (number of found entries etc before)
+"//ui.adsabs.harvard.edu/abs/2018arXiv181204698D"");"
+"//ui.adsabs.harvard.edu/abs/2012LRR....15...10F"");"
+"//ui.adsabs.harvard.edu/abs/2012NatMa..11...44S"");"
+"//ui.adsabs.harvard.edu/abs/2007ITGRS..45..879X"");"
+"//ui.adsabs.harvard.edu/abs/1982Icar...52...62I"");"
+"//ui.adsabs.harvard.edu/abs/2000JGR...10520297L"");"
+"// We need to load the css file manually, due to a bug in the jdk"
+// TODO: Remove this workaround as soon as https://github.com/openjdk/jfx/pull/22 is merged
+// Number of results
+"//uriBuilder.addParameter(""page"", ""1""); // Page (not needed so far)"
+"//bibtex.chimbori.com/isbn-bibtex"")"
+//dev.elsevier.com/'
+"//www.google.com"")"
+//shortdoi.org'
+//ui.adsabs.harvard.edu/)
+"// We need to load the css file manually, due to a bug in the jdk"
+// TODO: Remove this workaround as soon as https://github.com/openjdk/jfx/pull/22 is merged
+"//api.adsabs.harvard.edu/v1/search/query"";"
+"//api.adsabs.harvard.edu/v1/export/bibtexabs"";"
+//TODO Add API Token
+// Search astronomy + physics + arXiv db
+// Post-cleanup
+"//ui.adsabs.harvard.edu/abs/2018arXiv181204698D"");"
+"//ui.adsabs.harvard.edu/abs/2012LRR....15...10F"");"
+"//ui.adsabs.harvard.edu/abs/2012NatMa..11...44S"");"
+"//ui.adsabs.harvard.edu/abs/2007ITGRS..45..879X"");"
+"//ui.adsabs.harvard.edu/abs/1982Icar...52...62I"");"
+"//ui.adsabs.harvard.edu/abs/2000JGR...10520297L"");"
+"//ui.adsabs.harvard.edu/abs/2018arXiv181204698D"");"
+"//ui.adsabs.harvard.edu/abs/2012LRR....15...10F"");"
+"//ui.adsabs.harvard.edu/abs/2012NatMa..11...44S"");"
+"//ui.adsabs.harvard.edu/abs/2007ITGRS..45..879X"");"
+"//ui.adsabs.harvard.edu/abs/1982Icar...52...62I"");"
+"//ui.adsabs.harvard.edu/abs/2000JGR...10520297L"");"
+// Remove ADS note
+// Move adsurl to url field
+// The fetcher adds some garbage (number of found entries etc before)
+"//adsabs.harvard.edu/abs/2014arXiv1405.2249D"");"
+"//adsabs.harvard.edu/abs/2012LRR....15...10F"");"
+"//adsabs.harvard.edu/abs/2012NatMa..11...44S"");"
+"//adsabs.harvard.edu/abs/2007ITGRS..45..879X"");"
+"//adsabs.harvard.edu/abs/1982Icar...52...62I"");"
+"//adsabs.harvard.edu/abs/2000JGR...10520297L"");"
+//Remove abstract due to copyright
+//Remove abstract due to copyright
+"//api.adsabs.harvard.edu/v1/search/query"";"
+"//api.adsabs.harvard.edu/v1/export/bibtexabs"";"
+// Post-cleanup
+//TODO Replace Old ADS after the new one is mature
+//www.adsabs.harvard.edu/)
+//adsabs.harvard.edu/basic_search.html Entry -based: http://adsabs.harvard.edu/abstract_service.html
+//github.com/adsabs/adsabs-dev-api) but it returns JSON (or at least needs multiple
+"//api.adsabs.harvard.edu/v1/search/query"";"
+"//api.adsabs.harvard.edu/v1/export/bibtexabs"";"
+//TODO Add API Token
+// Post-cleanup
+//adsabs.harvard.edu/basic_search.html Entry -based: http://adsabs.harvard.edu/abstract_service.html
+//github.com/adsabs/adsabs-dev-api) but it returns JSON (or at least needs multiple
+"// In the main program, this field is initialized in JabRefMain.java"
+// Open entry editor for first entry on start up.
+// Open entry editor for first entry on start up.
+"// In the main program, this field is initialized in JabRefMain.java"
+"//www.uninformativ.de/blog/postings/2017-04-02/0/POSTING-en.html"">Short summary for X11 clipboards</a>"
+"//unix.stackexchange.com/questions/139191/whats-the-difference-between-primary-selection-and-clipboard-buffer/139193#139193"">Longer text over clipboards</a>"
+// Singleton with enum
+"// For activating this functionality in an input, use:"
+//
+"// input.selectedTextProperty().addListener((observable, oldValue, newValue) -> watchInput(newValue));"
+// input.setOnMouseClicked(event -> {
+//     if (event.getButton() == MouseButton.MIDDLE) {
+//         inputToPrimary(input);
+//     }
+// });
+// Get the text from Primary
+// Copy from Clipboard to Primary
+// Active Primary clipboard
+// Active Primary clipboard
+// Active Primary clipboard
+// Singleton pattern
+// Private constructor (singleton)
+// Singleton pattern
+// Override clone() method
+// X11 Primary Selection
+// Copy to X11 Primary Clipboard
+// X11 Primary Selection
+"//markjs.io/\n"" +"
+"//git.io/vwTVl\n"" +"
+"//markjs.io/\n"" +"
+"//git.io/vwTVl\n"" +"
+// Remove previous subscriptions
+// import com.jfoenix.controls.JFXColorPicker;
+//private final JFXColorPicker colorField = new JFXColorPicker();
+// Remove previous subscriptions
+// Preview tab
+// Keep this for later conversion of the library-properties
+// we do not trim the value at the assignment to enable users to have spaces at the beginning and
+// at the end of the pattern
+"// The list and the default properties are being overwritten by the bound properties of the tableView, but to"
+"// prevent an NPE on storing the preferences before lazy-loading of the setValues, they need to be initialized."
+"// No Radioitem selected, should not happen, but if, make KEY_GEN_FIRST_LETTER_A default"
+// we do not trim the value at the assignment to enable users to have spaces at the beginning and
+// at the end of the pattern
+// Keep this for later conversion of the library-properties
+// we do not trim the value at the assignment to enable users to have spaces at the beginning and
+// at the end of the pattern
+"// The list and the default properties are being overwritten by the bound properties of the tableView, but to"
+"// prevent an NPE on storing the preferences before lazy-loading of the setValues, they need to be initialized."
+"// No Radioitem selected, should not happen, but if, make KEY_GEN_FIRST_LETTER_A default"
+// we do not trim the value at the assignment to enable users to have spaces at the beginning and
+// at the end of the pattern
+"// If the file is an ordinary file (i.e. not part of a java runtime bundle), we watch it for changes and turn on live reloading"
+// Remove special ISBN fetcher since we don't want to expose them to the user
+// Restore window location and/or maximised state
+// We create a decoration pane ourselves for performance reasons
+"// (otherwise it has to be injected later, leading to a complete redraw/relayout of the complete scene)"
+// passed file (we take the first one) should be focused
+// Subscribe to the search
+// Update active search query when switching between databases
+// do nothing by default
+// do nothing by default
+// Only text based exporters can be used
+//                    // Shift + Tab > previous text area
+//                        // Ctrl + Tab > insert tab
+//                    // Shift + Tab > previous text area
+//                        // Ctrl + Tab > insert tab
+//github.com/javafxports/openjdk-jfx/issues/583
+"// (maskText(""A"") != ""A"");"
+// Update appearance of group
+// Put the pseudo class there depending on the current value
+"// If the file is an ordinary file (i.e. not part of a java runtime bundle), we watch it for changes and turn on live reloading"
+// fallback if stored position is no longer valid
+//set an required OR field (author/editor)
+//set an optional field
+// @formatter:off
+// @formatter:on
+//set an required OR field with both fields(author/editor)
+//set an optional field
+// @formatter:off
+// @formatter:on
+// Remove special ISBN fetcher since we don't want to expose them to the user
+"// If the file is an ordinary file (i.e. not part of a java runtime bundle), we watch it for changes and turn on live reloading"
+// Remove special ISBN fetcher since we don't want to expose them to the user
+// Only text based exporters can be used
+//set an required OR field (author/editor)
+//set an optional field
+// @formatter:off
+// @formatter:on
+//set an required OR field with both fields(author/editor)
+//set an optional field
+// @formatter:off
+// @formatter:on
+// do nothing by default
+// do nothing by default
+// Remove special ISBN fetcher since we don't want to expose them to the user
+// fallback if stored position is no longer valid
+// Restore window location and/or maximised state
+// We create a decoration pane ourselves for performance reasons
+"// (otherwise it has to be injected later, leading to a complete redraw/relayout of the complete scene)"
+// passed file (we take the first one) should be focused
+//                    // Shift + Tab > previous text area
+//                        // Ctrl + Tab > insert tab
+//                    // Shift + Tab > previous text area
+//                        // Ctrl + Tab > insert tab
+//github.com/javafxports/openjdk-jfx/issues/583
+"// (maskText(""A"") != ""A"");"
+// Put the pseudo class there depending on the current value
+// Put the pseudo class there depending on the current value
+// Put the pseudo class there depending on the current value
+//                    // Shift + Tab > previous text area
+//                        // Ctrl + Tab > insert tab
+//                    // Shift + Tab > previous text area
+//                        // Ctrl + Tab > insert tab
+//github.com/javafxports/openjdk-jfx/issues/583
+"// (maskText(""A"") != ""A"");"
+// Subscribe to the search
+// Update active search query when switching between databases
+// Update appearance of group
+// Update appearance of group
+//setBounds(GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds());
+"//WindowLocation pw = new WindowLocation(this, JabRefPreferences.POS_X, JabRefPreferences.POS_Y, JabRefPreferences.SIZE_X,"
+//        JabRefPreferences.SIZE_Y);
+//pw.displayWindowAtStoredLocation();
+// Bind global state
+// Poor-mans binding to global state
+// Update search query
+// groupSidePane.getToggleCommand().setSelected(sidePaneManager.isComponentVisible(GroupSidePane.class));
+//previewToggle.setSelected(Globals.prefs.getPreviewPreferences().isPreviewPanelEnabled());
+//generalFetcher.getToggleCommand().setSelected(sidePaneManager.isComponentVisible(WebSearchPane.class));
+//openOfficePanel.getToggleCommand().setSelected(sidePaneManager.isComponentVisible(OpenOfficeSidePanel.class));
+// Update search autocompleter with information for the correct database:
+// TODO: Remove this copy as soon as the one included in AI is compatible with log4j 3
+"// TODO: Username, domain and identity should be included as in .NET version."
+"// TODO: Should check, seems that it is not included in Log4j2."
+// TODO: Remove this copy as soon as the one included in AI is compatible with log4j 3
+"// TODO: Username, domain and identity should be included as in .NET version."
+"// TODO: Should check, seems that it is not included in Log4j2."
+// -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+//mozilla.org/MPL/2.0/.
+//www.apache.org/licenses/LICENSE-2.0 .
+// insert the service manager
+// insert the factory of the loader
+// insert the factory of the URLResolver
+// insert the bridgefactory
+// insert the connector
+// insert the acceptor
+// initial component context
+// add smgr
+// ... xxx todo: add standard entries
+// insert basic jurt factories
+// jni convenience: easier to iterate over array than calling Hashtable
+// Find out if we are configured with DISABLE_DYNLOADING or
+// not. Try to load the lo-bootstrap shared library which
+// won't exist in the DISABLE_DYNLOADING case. (And which will
+"// be already loaded otherwise, so nothing unexpected happens"
+"// that case.) Yeah, this would be simpler if I just could be"
+// bothered to keep a separate branch for DISABLE_DYNLOADING
+"// on Android, merging in master periodically, until I know"
+"// for sure whether it is what I want, or not."
+// create default local component context
+// find office executable relative to this class's class loader
+// create call with arguments
+"//We need a socket, pipe does not work. https://api.libreoffice.org/examples/examples.html"
+// start office process
+// initial service manager
+// create a URL resolver
+// connection string
+// wait until office is started
+// try to connect to office
+"// Wait 500 ms, then try to connect again, but do not wait"
+// longer than 5 min (= 600 * 500 ms) total:
+// vim:set shiftwidth=4 softtabstop=4 expandtab:
+"// We need to get the tab header, the following is a ugly workaround"
+// Different actions depending on where the user releases the drop in the target row
+// Bottom + top -> import entries
+// Center -> link files to entry
+"// Depending on the pressed modifier, move/copy/link files to drop target"
+//shift on win or no modifier
+//alt on win
+//ctrl on win
+// Pseudo-classes for drag and drop
+"//We need a socket, pipe does not work. https://api.libreoffice.org/examples/examples.html"
+// -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+//mozilla.org/MPL/2.0/.
+//www.apache.org/licenses/LICENSE-2.0 .
+// insert the service manager
+// insert the factory of the loader
+// insert the factory of the URLResolver
+// insert the bridgefactory
+// insert the connector
+// insert the acceptor
+// initial component context
+// add smgr
+// ... xxx todo: add standard entries
+// insert basic jurt factories
+// jni convenience: easier to iterate over array than calling Hashtable
+// Find out if we are configured with DISABLE_DYNLOADING or
+// not. Try to load the lo-bootstrap shared library which
+// won't exist in the DISABLE_DYNLOADING case. (And which will
+"// be already loaded otherwise, so nothing unexpected happens"
+"// that case.) Yeah, this would be simpler if I just could be"
+// bothered to keep a separate branch for DISABLE_DYNLOADING
+"// on Android, merging in master periodically, until I know"
+"// for sure whether it is what I want, or not."
+// create default local component context
+// find office executable relative to this class's class loader
+// create random pipe name
+// create call with arguments
+// start office process
+// initial service manager
+// create a URL resolver
+// connection string
+// wait until office is started
+// try to connect to office
+"// Wait 500 ms, then try to connect again, but do not wait"
+// longer than 5 min (= 600 * 500 ms) total:
+// vim:set shiftwidth=4 softtabstop=4 expandtab:
+"// We need to get the tab header, the following is a ugly workaround"
+// Different actions depending on where the user releases the drop in the target row
+// Bottom + top -> import entries
+// Center -> link files to entry
+"// Depending on the pressed modifier, move/copy/link files to drop target"
+//shift on win or no modifier
+//alt on win
+//ctrl on win
+// Pseudo-classes for drag and drop
+"// The implementation supports all combinations (TRUE+TRUE and FALSE+FALSE, even if the latter does not make sense)"
+// for each column get either actual width or - if it does not exist - default value
+//gist.github.com/lestard/011e9ed4433f9eb791a8
+// Trying to make the parser more robust.
+"// If an exception is thrown when parsing an entry, drop the entry and try to resume parsing."
+//shortdoi.org
+"//shortdoi.org/"";"
+"// This formatter is a duplicate of AuthorAbbreviator, so we simply call that one."
+//// 1. Sort out forbidden fields
+//// 2. Handle special field mappings
+// those fields are no more available for the same-name inheritance strategy
+"// for these fields, inheritance is not allowed for the specified entry types"
+// those fields are no more available for the same-name inheritance strategy
+"// for these fields, inheritance is not allowed for the specified entry types"
+// those fields are no more available for the same-name inheritance strategy
+"// for these fields, inheritance is not allowed for the specified entry types"
+//// 3. Fallback to inherit the field with the same name.
+"// field in the referred entry, following the biblatex rules"
+//shortdoi.org
+// DOI/Short DOI resolver
+// divider
+// suffix alphanumeric without space
+// end group \1
+// Regex (Short DOI)
+// optional urn
+// optional doi
+// begin group \1
+// directory indicator
+// divider
+// end group \1
+// optional urn
+// optional doi
+// begin group \1
+// directory indicator
+// divider
+// suffix alphanumeric without space
+// end group \1
+"//[^\\s]+?"" + DOI_EXP;"
+"//[^\\s]+?"" + SHORT_DOI_EXP;"
+"//[^\\s]+?)?"" + DOI_EXP + ""$"", Pattern.CASE_INSENSITIVE);"
+"//[^\\s]+?)?"" + FIND_DOI_EXP, Pattern.CASE_INSENSITIVE);"
+// Pattern (short DOI)
+"//[^\\s]+?)?"" + SHORT_DOI_EXP, Pattern.CASE_INSENSITIVE);"
+"//[^\\s]+?)?"" + FIND_SHORT_DOI_EXP, Pattern.CASE_INSENSITIVE);"
+// Short DOI
+"//"" + url.getHost() + url.getPath();"
+// Extract DOI/Short DOI
+// Short DOI
+"//doi.org/urn:doi:10/gf4gqc"").getDOI());"
+"// : is also allowed as divider, will be replaced by RESOLVER"
+"//doi.org/urn:doi:10:gf4gqc"").getDOI());"
+// http
+"//doi.org/10/gf4gqc"").getDOI());"
+// https
+"//doi.org/10/gf4gqc"").getDOI());"
+// https with % divider
+"//dx.doi.org/10%2Fgf4gqc"").getDOI());"
+// other domains
+"//doi.acm.org/10/gf4gqc"").getDOI());"
+"//doi.acm.net/10/gf4gqc"").getDOI());"
+"//doi.acm.com/10/gf4gqc"").getDOI());"
+"//doi.acm.de/10/gf4gqc"").getDOI());"
+"//dx.doi.org/10/gf4gqc"").getDOI());"
+"//dx.doi.net/10/gf4gqc"").getDOI());"
+"//dx.doi.com/10/gf4gqc"").getDOI());"
+"//dx.doi.de/10/gf4gqc"").getDOI());"
+"//dx.doi.org/10/gf4gqc"").getDOI());"
+"//doi.ieeecomputersociety.org/10/gf4gqc"").getDOI());"
+"//doi.org/10/gf4gqc"", new DOI(""10/gf4gqc"").getURIAsASCIIString());"
+"//doi.org/10/gf4gqc"", DOI.parse(shortDoiWithSpace).get().getURIAsASCIIString());"
+//gist.github.com/lestard/011e9ed4433f9eb791a8
+// Trying to make the parser more robust.
+"// If an exception is thrown when parsing an entry, drop the entry and try to resume parsing."
+"// This formatter is a duplicate of AuthorAbbreviator, so we simply call that one."
+//// 1. Sort out forbidden fields
+//// 2. Handle special field mappings
+// those fields are no more available for the same-name inheritance strategy
+"// for these fields, inheritance is not allowed for the specified entry types"
+// those fields are no more available for the same-name inheritance strategy
+"// for these fields, inheritance is not allowed for the specified entry types"
+// those fields are no more available for the same-name inheritance strategy
+"// for these fields, inheritance is not allowed for the specified entry types"
+//// 3. Fallback to inherit the field with the same name.
+"// field in the referred entry, following the biblatex rules"
+"// The implementation supports all combinations (TRUE+TRUE and FALSE+FALSE, even if the latter does not make sense)"
+// for each column get either actual width or - if it does not exist - default value
+//shortdoi.org
+"//shortdoi.org/"";"
+//shortdoi.org
+// DOI/Short DOI resolver
+// divider
+// suffix alphanumeric without space
+// end group \1
+// Regex (Short DOI)
+// optional urn
+// optional doi
+// begin group \1
+// directory indicator
+// divider
+// end group \1
+// optional urn
+// optional doi
+// begin group \1
+// directory indicator
+// divider
+// suffix alphanumeric without space
+// end group \1
+"//[^\\s]+?"" + DOI_EXP;"
+"//[^\\s]+?"" + SHORT_DOI_EXP;"
+"//[^\\s]+?)?"" + DOI_EXP + ""$"", Pattern.CASE_INSENSITIVE);"
+"//[^\\s]+?)?"" + FIND_DOI_EXP, Pattern.CASE_INSENSITIVE);"
+// Pattern (short DOI)
+"//[^\\s]+?)?"" + SHORT_DOI_EXP, Pattern.CASE_INSENSITIVE);"
+"//[^\\s]+?)?"" + FIND_SHORT_DOI_EXP, Pattern.CASE_INSENSITIVE);"
+// Short DOI
+"//"" + url.getHost() + url.getPath();"
+// Extract DOI/Short DOI
+// Short DOI
+"//doi.org/urn:doi:10/gf4gqc"").getDOI());"
+"// : is also allowed as divider, will be replaced by RESOLVER"
+"//doi.org/urn:doi:10:gf4gqc"").getDOI());"
+// http
+"//doi.org/10/gf4gqc"").getDOI());"
+// https
+"//doi.org/10/gf4gqc"").getDOI());"
+// https with % divider
+"//dx.doi.org/10%2Fgf4gqc"").getDOI());"
+// other domains
+"//doi.acm.org/10/gf4gqc"").getDOI());"
+"//doi.acm.net/10/gf4gqc"").getDOI());"
+"//doi.acm.com/10/gf4gqc"").getDOI());"
+"//doi.acm.de/10/gf4gqc"").getDOI());"
+"//dx.doi.org/10/gf4gqc"").getDOI());"
+"//dx.doi.net/10/gf4gqc"").getDOI());"
+"//dx.doi.com/10/gf4gqc"").getDOI());"
+"//dx.doi.de/10/gf4gqc"").getDOI());"
+"//dx.doi.org/10/gf4gqc"").getDOI());"
+"//doi.ieeecomputersociety.org/10/gf4gqc"").getDOI());"
+"//doi.org/10/gf4gqc"", new DOI(""10/gf4gqc"").getURIAsASCIIString());"
+"//doi.org/10/gf4gqc"", DOI.parse(shortDoiWithSpace).get().getURIAsASCIIString());"
+// TODO Auto-generated catch block
+//gist.github.com/lestard/011e9ed4433f9eb791a8
+// Trying to make the parser more robust.
+"// If an exception is thrown when parsing an entry, drop the entry and try to resume parsing."
+"// This formatter is a duplicate of AuthorAbbreviator, so we simply call that one."
+"// The implementation supports all combinations (TRUE+TRUE and FALSE+FALSE, even if the latter does not make sense)"
+// for each column get either actual width or - if it does not exist - default value
+//shortdoi.org
+"//shortdoi.org/"";"
+//shortdoi.org
+// DOI/Short DOI resolver
+// divider
+// suffix alphanumeric without space
+// end group \1
+// Regex (Short DOI)
+// optional urn
+// optional doi
+// begin group \1
+// directory indicator
+// divider
+// end group \1
+// optional urn
+// optional doi
+// begin group \1
+// directory indicator
+// divider
+// suffix alphanumeric without space
+// end group \1
+"//[^\\s]+?"" + DOI_EXP;"
+"//[^\\s]+?"" + SHORT_DOI_EXP;"
+"//[^\\s]+?)?"" + DOI_EXP + ""$"", Pattern.CASE_INSENSITIVE);"
+"//[^\\s]+?)?"" + FIND_DOI_EXP, Pattern.CASE_INSENSITIVE);"
+// Pattern (short DOI)
+"//[^\\s]+?)?"" + SHORT_DOI_EXP, Pattern.CASE_INSENSITIVE);"
+"//[^\\s]+?)?"" + FIND_SHORT_DOI_EXP, Pattern.CASE_INSENSITIVE);"
+// Short DOI
+"//"" + url.getHost() + url.getPath();"
+// Extract DOI/Short DOI
+// Short DOI
+"//doi.org/urn:doi:10/gf4gqc"").getDOI());"
+"// : is also allowed as divider, will be replaced by RESOLVER"
+"//doi.org/urn:doi:10:gf4gqc"").getDOI());"
+// http
+"//doi.org/10/gf4gqc"").getDOI());"
+// https
+"//doi.org/10/gf4gqc"").getDOI());"
+// https with % divider
+"//dx.doi.org/10%2Fgf4gqc"").getDOI());"
+// other domains
+"//doi.acm.org/10/gf4gqc"").getDOI());"
+"//doi.acm.net/10/gf4gqc"").getDOI());"
+"//doi.acm.com/10/gf4gqc"").getDOI());"
+"//doi.acm.de/10/gf4gqc"").getDOI());"
+"//dx.doi.org/10/gf4gqc"").getDOI());"
+"//dx.doi.net/10/gf4gqc"").getDOI());"
+"//dx.doi.com/10/gf4gqc"").getDOI());"
+"//dx.doi.de/10/gf4gqc"").getDOI());"
+"//dx.doi.org/10/gf4gqc"").getDOI());"
+"//doi.ieeecomputersociety.org/10/gf4gqc"").getDOI());"
+"//doi.org/10/gf4gqc"", new DOI(""10/gf4gqc"").getURIAsASCIIString());"
+"//doi.org/10/gf4gqc"", DOI.parse(shortDoiWithSpace).get().getURIAsASCIIString());"
+"// Class<?> clazz = Class.forName(""com.sun.star.comp.helper.Bootstrap"", true, new ChildFirstClassLoader( jarList.toArray(new URL[0]),null ));"
+// has the class loaded already?
+// find the class from given jar urls 
+// Hmmm... class does not exist in the given urls.
+// Let's try finding it in our parent classloader.
+// this'll throw ClassNotFoundException in failure.                  
+// marked to resolve
+// ensureCorrectJavaVersion();
+// ensureCorrectJavaVersion();
+//github.com/JabRef/jabref/issues/5245
+// workaround for not using MaterialDesignIconFactory
+// default case copied from GlyphsFactory
+// Swing
+// SQL
+// JavaFX
+// Logging
+// Preferences and XML
+// Annotations (@PostConstruct)
+// Microsoft application insights
+// Libre Office
+// Other modules
+// Swing
+// SQL
+// JavaFX
+// Logging
+// Preferences and XML
+// Annotations (@PostConstruct)
+// Microsoft application insights
+// Libre Office
+// Other modules
+// Process arguments
+// Check for running JabRef
+"// If not, start GUI"
+// TODO: TextAreaSkin changed in Java 9
+// Shift + Tab > previous text area
+// Ctrl + Tab > insert tab
+"// TODO: temporarily removed, as this is internal API"
+//                TextAreaSkin skin = (TextAreaSkin) getSkin();
+//                if (event.isShiftDown()) {
+//                    // Shift + Tab > previous text area
+//                    skin.getBehavior().traversePrevious();
+//                } else {
+//                    if (event.isControlDown()) {
+//                        // Ctrl + Tab > insert tab
+"//                        skin.getBehavior().callAction(""InsertTab"");"
+//                    } else {
+//                        // Tab > next text area
+//                        skin.getBehavior().traverseNext();
+//                    }
+//                }
+"// TODO: temporarily removed, internal API"
+//            @Override
+//            public void populateContextMenu(ContextMenu contextMenu) {
+//                super.populateContextMenu(contextMenu);
+"//                contextMenu.getItems().addAll(0, items.get());"
+//            }
+//import com.sun.javafx.scene.control.skin.TextFieldSkin;
+// TODO: TextFieldSkin changed in Java 9
+// Shift + Tab > previous text area
+// Ctrl + Tab > insert tab
+//            if (event.getCode() == KeyCode.TAB) {
+//                TextFieldSkin skin = (TextFieldSkin) getSkin();
+//                if (event.isShiftDown()) {
+//                    // Shift + Tab > previous text area
+//                    skin.getBehavior().traversePrevious();
+//                } else {
+//                    if (event.isControlDown()) {
+//                        // Ctrl + Tab > insert tab
+"//                        skin.getBehavior().callAction(""InsertTab"");"
+//                    } else {
+//                        // Tab > next text area
+//                        skin.getBehavior().traverseNext();
+//                    }
+//                }
+//                event.consume();
+//            }
+//        TextFieldSkin customContextSkin = new TextFieldSkin(this) {
+//            @Override
+//            public void populateContextMenu(ContextMenu contextMenu) {
+//                super.populateContextMenu(contextMenu);
+"//                contextMenu.getItems().addAll(0, items.get());"
+//            }
+//        };
+//        setSkin(customContextSkin);
+"// TODO: reflective access, should be removed"
+"// TODO: reflective access, should be removed"
+"// TODO: reflective access, should be removed"
+"// TODO: reflective access, should be removed"
+// Need to run this on the JavaFX thread
+"// TODO: reflective access, should be removed"
+"// we have to point it to one existing file, otherwise it will return the default class path"
+// The order of elements changes from Windows to Travis environment somehow
+"// The order does not really matter, so we ignore it."
+// Source: https://stackoverflow.com/a/16540679/873282
+// TODO: Reenable as soon as https://github.com/ronmamo/reflections/issues/202 is fixed
+// Need to run on JavaFX thread since we are parsing FXML files
+"// We need to load in ""static mode"" because otherwise fxml files with fx:root doesn't work"
+"// Somebody decided to make ""setStaticLoad"" package-private, so let's use reflection"
+// default
+// Preload databases from BIB files.
+"// Get all pairs Entry<String entryKey, Citation>."
+// Add all new entries to the newEntries set.
+// Get a specific entry from an entryKey and a BIB file.
+// Check if there is already an entry with the same key in the given database.
+// Add cross-referencing data to the entry (fill empty fields).
+// TODO: Move somewhere more appropriate and make user-configurable
+// Treat unknown fields as multi-line fields
+// The order of elements changes from Windows to Travis environment somehow
+"// The order does not really matter, so we ignore it."
+// Source: https://stackoverflow.com/a/16540679/873282
+// default
+// TODO: Move somewhere more appropriate and make user-configurable
+// Treat unknown fields as multi-line fields
+// Preload databases from BIB files.
+"// Get all pairs Entry<String entryKey, Citation>."
+// Add all new entries to the newEntries set.
+// Get a specific entry from an entryKey and a BIB file.
+// Check if there is already an entry with the same key in the given database.
+// Add cross-referencing data to the entry (fill empty fields).
+"//"");"
+// menu.getItems().add(nextPreviewLayout);
+// menu.getItems().add(previousPreviewLayout);
+// User changed the underlying LaTeX file
+// We ignore this error and just continue with parsing
+// Some weired error during reading
+// We ignore this error and just continue with parsing
+// modifies class variable texParserResult
+// BibTeXKey --> set of citations
+// The character � is on purpose - we cannot use Apache Tika's CharsetDetector - see ADR-0005
+// The character � is on purpose - we cannot use Apache Tika's CharsetDetector - see ADR-0005
+"//"");"
+// menu.getItems().add(nextPreviewLayout);
+// menu.getItems().add(previousPreviewLayout);
+// User changed the underlying LaTeX file
+// We ignore this error and just continue with parsing
+// Some weired error during reading
+// We ignore this error and just continue with parsing
+// modifies class variable texParserResult
+// BibTeXKey --> set of citations
+// The character � is on purpose - we cannot use Apache Tika's CharsetDetector - see ADR-0005
+// The character � is on purpose - we cannot use Apache Tika's CharsetDetector - see ADR-0005
+// menu.getItems().add(nextPreviewLayout);
+// menu.getItems().add(previousPreviewLayout);
+// menu.getItems().add(nextPreviewLayout);
+// menu.getItems().add(previousPreviewLayout);
+// menu.getItems().add(nextPreviewLayout);
+// menu.getItems().add(previousPreviewLayout);
+"// Get all pairs Entry<String entryKey, Citation>."
+// Get a specific entry from an entryKey and a BIB file.
+// Check if there is already an entry with the same key in the given database.
+// Add cross-referencing data to the entry (fill empty fields).
+// handled by FX in TextInputControl#paste
+// handled by FX in TextInputControl#paste
+"//"");"
+// User changed the underlying LaTeX file
+// We ignore this error and just continue with parsing
+// Some weired error during reading
+// We ignore this error and just continue with parsing
+// modifies class variable texParserResult
+// BibTeXKey --> set of citations
+// || (OR)
+// && (AND)
+// ! (NOT)
+// combined (!a&&b)
+// The character � is on purpose - we cannot use Apache Tika's CharsetDetector - see ADR-0005
+// The character � is on purpose - we cannot use Apache Tika's CharsetDetector - see ADR-0005
+// The character � is on purpose - we cannot use Apache Tika's CharsetDetector - see ADR-0005
+// The character � is on purpose - we cannot use Apache Tika's CharsetDetector - see ADR-0005
+// TODO: javafx variant only avaiable in java 9 and updwards
+// https://docs.oracle.com/javase/9/docs/api/javafx/stage/Window.html#getWindows--
+// handled by FX in TextInputControl#paste
+// handled by FX in TextInputControl#paste
+// TODO: Null!
+// for (int i = 0; i < GUIGlobals.ALL_FIELDS.length; ++i) {
+"// + ""of your entries.\nThis could cause undesired changes to """
+"// + ""your entries, so it is\nrecommended that you change the grouping"
+"// + ""in your group\ndefinition to \""keywords\"" or a non-standard name."""
+"// + ""\n\nDo you still want to continue?"","
+"// CTRL+V and ALT+V are disabled as CTRL+V is also ""paste"""
+// user has manually marked a text without using CTRL+W
+//swing needs the keys without pluses but whitespace between the modifiers
+// only rebinding of CTRL+a or CTRL+f changed
+// we simply reload the emacs mode to activate the CTRL+a/CTRL+f change
+// Text before the citation.
+// Citation text (highlighted).
+// Text after the citation.
+"//nothing found at ebook.de and chimbori.com, try ottobib"
+//www.ottobib.com
+"//www.ottobib.com/isbn/"";"
+// these fields are displayed by JabRef as default
+// NetworkTabView.java ensures that proxyHostname and proxyPort are not null
+// NetworkTabView.java ensures that proxyUsername and proxyPassword are neither null nor empty
+"//%s:%d/%s"", 3306),"
+// BibTeX
+// Biblatex
+"//for backwards compatibility, is equal to java.awt.Font.PLAIN"
+"// This checks for all all Swing packages, but not the UndoManager"
+"//""Currently disabled as there is no alternative for the rest of classes who need awt"""
+"//www.amazon.com/Effective-Java-2nd-Joshua-Bloch/dp/0321356683?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0321356683"");"
+"//www.amazon.com/Fundamentals-Business-Process-Management-Marlon/dp/3642434738?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=3642434738"");"
+"//www.ebook.de/de/product/35805105/marlon_dumas_marcello_la_rosa_jan_mendling_hajo_a_reijers_fundamentals_of_business_process_management.html"");"
+// || (OR)
+// && (AND)
+// ! (NOT)
+// combined (!a&&b)
+"//localhost:3306/xe"", DBMSType.MYSQL.getUrl(""localhost"", 3306, ""xe""));"
+"//"");"
+// handled by FX in TextInputControl#paste
+// handled by FX in TextInputControl#paste
+// these fields are displayed by JabRef as default
+// BibTeX
+// Biblatex
+// || (OR)
+// && (AND)
+// ! (NOT)
+// combined (!a&&b)
+// User changed the underlying LaTeX file
+// We ignore this error and just continue with parsing
+// Some weired error during reading
+// We ignore this error and just continue with parsing
+// modifies class variable texParserResult
+// BibTeXKey --> set of citations
+// User changed the underlying LaTeX file
+// We ignore this error and just continue with parsing
+// Some weired error during reading
+// We ignore this error and just continue with parsing
+// modifies class variable texParserResult
+// BibTeXKey --> set of citations
+// handled by FX in TextInputControl#paste
+// handled by FX in TextInputControl#paste
+// || (OR)
+// && (AND)
+// ! (NOT)
+// combined (!a&&b)
+// these fields are displayed by JabRef as default
+// BibTeX
+// Biblatex
+// Swing
+// SQL
+// JavaFX
+// Logging
+// Preferences and XML
+// Annotations (@PostConstruct)
+// Microsoft application insights
+// Libre Office
+// Other modules
+// these fields are displayed by JabRef as default
+// BibTeX
+// Biblatex
+// TODO: javafx variant only avaiable in java 9 and updwards
+// https://docs.oracle.com/javase/9/docs/api/javafx/stage/Window.html#getWindows--
+// Entry type unknown -> treat all fields as required
+// A reference to the entry this editor works on.
+// Alt on Windows
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Shift on Windows or no modifier
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Alt on Windows
+// Shift on Windows or no modifier
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Alt on Windows
+// Shift on Windows or no modifier
+// LaTeX citations tab
+"//"";"
+// Entry type unknown -> treat all fields as required
+// Entry type unknown -> treat all fields as required
+// Entry type unknown -> treat all fields as required
+// Add the edit field for Bibtex-key.
+// Entry type unknown -> treat all fields as required
+"//panel.getUndoManager().addEdit(new UndoableFieldChange(entry, editor.getName(), text, nextAbbreviation));"
+// TODO: Null!
+// for (int i = 0; i < GUIGlobals.ALL_FIELDS.length; ++i) {
+"// + ""of your entries.\nThis could cause undesired changes to """
+"// + ""your entries, so it is\nrecommended that you change the grouping"
+"// + ""in your group\ndefinition to \""keywords\"" or a non-standard name."""
+"// + ""\n\nDo you still want to continue?"","
+"// CTRL+V and ALT+V are disabled as CTRL+V is also ""paste"""
+// user has manually marked a text without using CTRL+W
+//swing needs the keys without pluses but whitespace between the modifiers
+"//icon.setToo(Localization.lang(""Open"") + "" PDF"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" CiteSeer URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" ArXiv URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" DOI "" + Localization.lang(""web link""));"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" PS"");"
+"//LOGGER.info(""Error: no table icon defined for type '"" + fieldType + ""'."");"
+"//LOGGER.info(""Error: no table icon defined for type '"" + field + ""'."");"
+// only rebinding of CTRL+a or CTRL+f changed
+// we simply reload the emacs mode to activate the CTRL+a/CTRL+f change
+// Text before the citation.
+// Citation text (highlighted).
+// Text after the citation.
+// Write required fields first.
+// Then optional fields.
+// Then write remaining fields in alphabetic order.
+"// Far from the threshold value, so we base our decision on the required fields only"
+"// Close to the threshold value, so we take a look at the optional fields, if any:"
+"// We don't know about the type, so simply compare fields without any distinction between optional/required"
+"// If the field is non-standard, we will just append braces, wrap and write."
+"// Otherwise (enrich returns empty optional) it is a completely unknown entry type, so ignore it"
+"//new AuthorLastFirst().format(getField(e, StandardField.AUTHOR_FIELD)));"
+"//new AuthorLastFirst().format(getField(e, StandardField.EDITOR_FIELD)));"
+"//new AuthorLastFirst().format(getField(e, StandardField.AUTHOR_FIELD)));"
+"//new AuthorLastFirst().format(getField(e, StandardField.EDITOR_FIELD)));"
+// Increment entry counter.
+"//entry.setField(StandardField.IEEE_ID, jsonEntry.optString(""article_number""));"
+"//nothing found at ebook.de and chimbori.com, try ottobib"
+"// new FieldFormatterCleanup(StandardField.URL, new ClearFormatter()).cleanup(entry);"
+"// new FieldFormatterCleanup(StandardField.URL, new ClearFormatter()).cleanup(entry);"
+//www.ottobib.com
+"//www.ottobib.com/isbn/"";"
+// For biblatex
+"//"") || s.startsWith(""ftp://"") ? StandardField.URL"
+// To store custom entry types parsed.
+"// at least one online database exports bibtex likes to do that, making"
+// Default
+// make all of them PT?
+"// set ""Review"" in Note/Comment?"
+"//"");"
+// TODO: javafx variant only avaiable in java 9 and updwards
+// https://docs.oracle.com/javase/9/docs/api/javafx/stage/Window.html#getWindows--
+// TODO: Null!
+// for (int i = 0; i < GUIGlobals.ALL_FIELDS.length; ++i) {
+"// + ""of your entries.\nThis could cause undesired changes to """
+"// + ""your entries, so it is\nrecommended that you change the grouping"
+"// + ""in your group\ndefinition to \""keywords\"" or a non-standard name."""
+"// + ""\n\nDo you still want to continue?"","
+"// CTRL+V and ALT+V are disabled as CTRL+V is also ""paste"""
+// user has manually marked a text without using CTRL+W
+//swing needs the keys without pluses but whitespace between the modifiers
+// only rebinding of CTRL+a or CTRL+f changed
+// we simply reload the emacs mode to activate the CTRL+a/CTRL+f change
+"//for backwards compatibility, is equal to java.awt.Font.PLAIN"
+"// This checks for all all Swing packages, but not the UndoManager"
+"//""Currently disabled as there is no alternative for the rest of classes who need awt"""
+"//%s:%d/%s"", 3306),"
+"//localhost:3306/xe"", DBMSType.MYSQL.getUrl(""localhost"", 3306, ""xe""));"
+"// On Linux, Java FX fonts look blurry per default. This can be improved by using a non-default rendering setting."
+// See https://github.com/woky/javafx-hates-linux
+// Build list of Import and Export formats
+// Override used newline character with the one stored in the preferences
+// Number of characters per line
+"//github.com/JabRef/jabref/issues."";"
+// Add changePane in case a file is present - otherwise just add the splitPane to the panel
+// create changeMonitor and changePane so we get notifications about outside changes to the file.
+"// if the database is not empty and no file is assigned,"
+// the database came from an import and has to be treated somehow
+// -> mark as changed
+// Snackbar dialog maximum size
+// Update search query
+// TODO: merge with import
+// PushToApplication
+"// Saved, now exit."
+// The action was either canceled or unsuccessful.
+// Save was cancelled or an error occurred.
+// We have to use reflection to get the associated label
+// Show tooltips
+// ToDO: Find a way to reuse JabRefIconView
+//$NON-NLS-1$
+// Perform all accepted changes
+//TODO: panel.getUndoManager().addEdit(ce);
+"// File on disk has changed, thus look for notable changes and notify listeners in case there are such changes"
+// normalize white spaces
+// replace the placeholder if used
+// normalize white spaces
+// replace the placeholder if used
+//default command
+// Entry type unknown -> treat all fields as required
+// A reference to the entry this editor works on.
+// Alt on Windows
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Shift on Windows or no modifier
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Alt on Windows
+// Shift on Windows or no modifier
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Alt on Windows
+// Shift on Windows or no modifier
+//alt on win
+// LaTeX citations tab
+"//"";"
+// Entry type unknown -> treat all fields as required
+// Entry type unknown -> treat all fields as required
+// Entry type unknown -> treat all fields as required
+// Add the edit field for Bibtex-key.
+// Entry type unknown -> treat all fields as required
+// System info
+// Steps to reproduce
+// Log messages
+// Bug report body
+// Reset title of tab
+// store undo information
+//Download and link full text
+"// On Windows, store application as empty if the ""Default"" option is selected,"
+// or if the application name is empty:
+"// We don't already know the file type, so we try to deduce it from the extension:"
+"// Now we know the extension, check if it is one we know about:"
+"// Typically, we have: CTRL+y is ""yank"" in emacs and REDO in 'normal' settings"
+"//panel.getUndoManager().addEdit(new UndoableFieldChange(entry, editor.getName(), text, nextAbbreviation));"
+"//.+"";"
+"// Try to strip the query string, if any, to get the correct suffix:"
+"// Don't report this error, since this getting the suffix is a non-critical"
+"// operation, and this error will be triggered and reported elsewhere."
+// First see if the stripped link gives a reasonable suffix:
+"// If the suffix doesn't seem to give any reasonable file type, try"
+// with the non-stripped link:
+"// No occurrence, or at the end"
+"// Check if there are path separators in the suffix - if so, it is definitely"
+"// not a proper suffix, so we should give up:"
+"// return the first one we found, anyway."
+"// Check if there are path separators in the suffix - if so, it is definitely"
+"// not a proper suffix, so we should give up:"
+"//.*"");"
+//Might be an URL
+"// The wrapper created by the FXCollections will set a weak listener on the wrapped list. This weak listener gets garbage collected. Hence, we need to maintain a reference to this list."
+// expand or collapse the tree item and reset the time
+// leave the expansion state of the tree item as it is
+// Run the actual open in a thread to prevent the program locking until the file is loaded.
+// Should this be done _after_ we know it was successfully opened?
+// Migrations:
+// Warning for migrating the Review into the Comment field
+// Check for new custom entry types loaded from the BIB file:
+//This method will execute the concrete file opening and loading in a background thread
+// do not open the original file
+// We need to make a copy as instances of LogEvent are reused by log4j
+"//icon.setToo(Localization.lang(""Open"") + "" PDF"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" CiteSeer URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" ArXiv URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" DOI "" + Localization.lang(""web link""));"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" PS"");"
+"//LOGGER.info(""Error: no table icon defined for type '"" + fieldType + ""'."");"
+"//LOGGER.info(""Error: no table icon defined for type '"" + field + ""'."");"
+"// ""null""+""txt"" Strings forbidden"
+"//nothing found at ebook.de and chimbori.com, try ottobib"
+//www.ottobib.com
+"//www.ottobib.com/isbn/"";"
+"//www.amazon.com/Effective-Java-2nd-Joshua-Bloch/dp/0321356683?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0321356683"");"
+"//www.amazon.com/Fundamentals-Business-Process-Management-Marlon/dp/3642434738?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=3642434738"");"
+"//www.ebook.de/de/product/35805105/marlon_dumas_marcello_la_rosa_jan_mendling_hajo_a_reijers_fundamentals_of_business_process_management.html"");"
+"//www.ottobib.com/isbn/"";"
+"//www.ottobib.com/isbn/"" + identifier + ""/bibtex"";"
+"//www.amazon.com/Effective-Java-2nd-Joshua-Bloch/dp/0321356683?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0321356683"");"
+"//www.amazon.com/Fundamentals-Business-Process-Management-Marlon/dp/3642434738?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=3642434738"");"
+"//www.ebook.de/de/product/35805105/marlon_dumas_marcello_la_rosa_jan_mendling_hajo_a_reijers_fundamentals_of_business_process_management.html"");"
+"//nothing found at ebook.de and chimbori.com, try ottobib"
+//www.ottobib.com
+"//www.ottobib.com/isbn/"" + identifier + ""/bibtex"";"
+// ottobib does not return an ISBN.
+"//www.ottobib.com/isbn/9782819502746/bibtex"");"
+"//www.ottobib.com/isbn/9782819502746/bibtex"");"
+// NetworkTabView.java ensures that proxyHostname and proxyPort are not null
+// NetworkTabView.java ensures that proxyUsername and proxyPassword are neither null nor empty
+// Text before the citation.
+// Citation text (highlighted).
+// Text after the citation.
+// Add all new entries to the newEntries set.
+"// Get all pairs Entry<String entryKey, Citation>."
+// Load the associated BIB file.
+// Get a specific entry from an entryKey and a BIB file.
+// Check if there is already an entry with the same key in the given database.
+// Add cross-referencing data to the entry (fill empty fields).
+// Preload databases from BIB files.
+"// Get all pairs Entry<String entryKey, Citation>."
+// Load the associated BIB file.
+// Get a specific entry from an entryKey.
+// Check if there is already an entry with the same key in the given database.
+// Add cross-referencing data to the entry (fill empty fields).
+// PushToApplication
+// ToDO: Find a way to reuse JabRefIconView
+// Entry type unknown -> treat all fields as required
+// A reference to the entry this editor works on.
+// Alt on Windows
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Shift on Windows or no modifier
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Alt on Windows
+// Shift on Windows or no modifier
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Alt on Windows
+// Shift on Windows or no modifier
+//alt on win
+// LaTeX citations tab
+"//"";"
+// Entry type unknown -> treat all fields as required
+// Entry type unknown -> treat all fields as required
+// Entry type unknown -> treat all fields as required
+// Add the edit field for Bibtex-key.
+// Entry type unknown -> treat all fields as required
+// System info
+// Steps to reproduce
+// Log messages
+// Bug report body
+"// We don't already know the file type, so we try to deduce it from the extension:"
+"// Now we know the extension, check if it is one we know about:"
+"//panel.getUndoManager().addEdit(new UndoableFieldChange(entry, editor.getName(), text, nextAbbreviation));"
+"//icon.setToo(Localization.lang(""Open"") + "" PDF"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" CiteSeer URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" ArXiv URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" DOI "" + Localization.lang(""web link""));"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" PS"");"
+"//LOGGER.info(""Error: no table icon defined for type '"" + fieldType + ""'."");"
+"//LOGGER.info(""Error: no table icon defined for type '"" + field + ""'."");"
+//default if no command specified
+// EMail
+// Push-To-Application
+// Open console
+// Open PDF
+// Open File Browser
+// Done by bindings
+// Flipped around
+// Flipped around
+// General
+// External file links
+// Autosave
+// ToDo: Remove this after conversion of all tabs
+// General
+// Entry owner
+// Time stamp
+"// ToDo: After conversion of all tabs to mvvm, rework interface and make validSettings bindable"
+// Button btnSave = (Button) this.getDialogPane().lookupButton(saveButton);
+// btnSave.disableProperty().bind(viewModel.validSettings().validProperty().not());
+// ToDo: Remove this after conversion of all tabs
+// Run validation checks
+// Store settings
+// ToDo: After conversion of all tabs: prefsTab.getViewModel().storeSettings();
+// ToDo: After conversion of all tabs: prefsTab.getViewModel().setValues();
+"// ToDo: Remove this after conversion of all tabs, done in ViewModel"
+// ToDo: After conversion of all tabs: viewModel.storeSettings()
+// ToDo: After conversion of all tabs: viewModel.validateSettings()
+// Done by bindings
+// TODO: Find a better way to update preview
+//basePanel.getPreviewPanel().updateLayout(preferences.getPreviewPreferences());
+//github.com/FXMisc/RichTextFX/blob/master/LICENSE and:
+//github.com/FXMisc/RichTextFX/blob/master/richtextfx-demos/README.md#xml-editor
+// see https://stackoverflow.com/questions/28603224/sort-tableview-with-drag-and-drop-rows
+//empty
+// Write required fields first.
+// Then optional fields.
+// Then write remaining fields in alphabetic order.
+"// Far from the threshold value, so we base our decision on the required fields only"
+"// Close to the threshold value, so we take a look at the optional fields, if any:"
+"// We don't know about the type, so simply compare fields without any distinction between optional/required"
+"// If the field is non-standard, we will just append braces, wrap and write."
+"// Otherwise (enrich returns empty optional) it is a completely unknown entry type, so ignore it"
+"//new AuthorLastFirst().format(getField(e, StandardField.AUTHOR_FIELD)));"
+"//new AuthorLastFirst().format(getField(e, StandardField.EDITOR_FIELD)));"
+"//new AuthorLastFirst().format(getField(e, StandardField.AUTHOR_FIELD)));"
+"//new AuthorLastFirst().format(getField(e, StandardField.EDITOR_FIELD)));"
+// Increment entry counter.
+"//entry.setField(StandardField.IEEE_ID, jsonEntry.optString(""article_number""));"
+"// new FieldFormatterCleanup(StandardField.URL, new ClearFormatter()).cleanup(entry);"
+"// new FieldFormatterCleanup(StandardField.URL, new ClearFormatter()).cleanup(entry);"
+// For biblatex
+"//"") || s.startsWith(""ftp://"") ? StandardField.URL"
+// To store custom entry types parsed.
+"// at least one online database exports bibtex likes to do that, making"
+// Default
+// make all of them PT?
+"// set ""Review"" in Note/Comment?"
+//make this method package visible so we can test it
+// idea: split[] contains the different lines
+// blocks are separated by empty lines
+// treat each block
+//   or do special treatment at authors (which are not broken)
+"//   therefore, we do a line-based and not a block-based splitting"
+// i points to the current line
+// curString (mostly) contains the current block
+"//   the different lines are joined into one and thereby separated by "" """
+//to prevent array index out of bounds exception on second run we need to reset i to zero
+// PDF could not be parsed or is empty
+// return empty list
+// we start at the current line
+"// i might get incremented later and curString modified, too"
+// year is a class variable as the method extractYear() uses it;
+// special case: possibly conference as first line on the page
+// e.g. Copyright (c) 1998 by the Genetics Society of America
+// future work: get year using RegEx
+// start: title
+//i points to the next non-empty line
+// after title: authors
+// author names are unlikely to be lines among different lines
+// treat them line by line
+"// if lines[i] is ""and"" then """" is returned by streamlineNames -> do nothing"
+"// then, abstract and keywords follow"
+"// only word ""abstract"" found -- skip line"
+"// fillCurStringWithNonEmptyLines() cannot be used as that uses "" "" as line separator"
+// whereas we need linebreak as separator
+"// only word ""Keywords"" found -- skip line"
+//   otherwise pos+1 leads to an out-of-bounds exception
+// assumption: last character of curString is NOT ' '
+//   otherwise pos+1 leads to an out-of-bounds exception
+"// last block: DOI, detailed information"
+"// sometimes, this information is in the third last block etc..."
+"// therefore, read until the beginning of the file"
+// i now points to the block before or is -1
+"// curString contains the last block, separated by "" """
+"//+2 because of "":"" after (Eds.) and the subsequent space"
+// looks like a Springer last line
+"// e.g: A. Persson and J. Stirna (Eds.): PoEM 2009, LNBIP 39, pp. 161-175, 2009."
+"//+2 because of "":"" after (Eds.) and the subsequent space"
+//we don't have any spaces after Eds so we substract the 2
+// IEEE has the conference things at the end
+// year is extracted by extractYear
+"// otherwise, we could it determine as follows:"
+// String yearStr = curString.substring(curString.length()-4);
+// if (isYear(yearStr)) {
+//  year = yearStr;
+// }
+// we found the price
+"// before the price, the ISSN is stated"
+// skip that
+// TODO: institution parsing missing
+// A reference to the entry this editor works on.
+// Alt on Windows
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Shift on Windows or no modifier
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Alt on Windows
+// Shift on Windows or no modifier
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Alt on Windows
+// Shift on Windows or no modifier
+// LaTeX citations tab
+// Skip comments and blank lines.
+// Add three dots when the string does not contain all the line.
+// || (OR)
+// && (AND)
+// ! (NOT)
+// combined (!a&&b)
+// Add three dots when the string does not contain all the line.
+// Entry type unknown -> treat all fields as required
+"//"";"
+// Entry type unknown -> treat all fields as required
+// Entry type unknown -> treat all fields as required
+// Entry type unknown -> treat all fields as required
+// Add the edit field for Bibtex-key.
+// Entry type unknown -> treat all fields as required
+"// We don't already know the file type, so we try to deduce it from the extension:"
+"// Now we know the extension, check if it is one we know about:"
+"//panel.getUndoManager().addEdit(new UndoableFieldChange(entry, editor.getName(), text, nextAbbreviation));"
+"//icon.setToo(Localization.lang(""Open"") + "" PDF"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" CiteSeer URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" ArXiv URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" DOI "" + Localization.lang(""web link""));"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" PS"");"
+"//LOGGER.info(""Error: no table icon defined for type '"" + fieldType + ""'."");"
+"//LOGGER.info(""Error: no table icon defined for type '"" + field + ""'."");"
+// Write required fields first.
+// Then optional fields.
+// Then write remaining fields in alphabetic order.
+"// Far from the threshold value, so we base our decision on the required fields only"
+"// Close to the threshold value, so we take a look at the optional fields, if any:"
+"// We don't know about the type, so simply compare fields without any distinction between optional/required"
+"// If the field is non-standard, we will just append braces, wrap and write."
+"// Otherwise (enrich returns empty optional) it is a completely unknown entry type, so ignore it"
+"//new AuthorLastFirst().format(getField(e, StandardField.AUTHOR_FIELD)));"
+"//new AuthorLastFirst().format(getField(e, StandardField.EDITOR_FIELD)));"
+"//new AuthorLastFirst().format(getField(e, StandardField.AUTHOR_FIELD)));"
+"//new AuthorLastFirst().format(getField(e, StandardField.EDITOR_FIELD)));"
+// Increment entry counter.
+"//entry.setField(StandardField.IEEE_ID, jsonEntry.optString(""article_number""));"
+"// new FieldFormatterCleanup(StandardField.URL, new ClearFormatter()).cleanup(entry);"
+"// new FieldFormatterCleanup(StandardField.URL, new ClearFormatter()).cleanup(entry);"
+// For biblatex
+"//"") || s.startsWith(""ftp://"") ? StandardField.URL"
+// To store custom entry types parsed.
+"// at least one online database exports bibtex likes to do that, making"
+// Default
+// make all of them PT?
+"// set ""Review"" in Note/Comment?"
+// Normalize whitespaces
+// Normalize whitespaces
+// reference layout mapped from entry type:
+"//github.com/JabRef"");"
+//noinspection unchecked
+// Treat required fields as important ones
+// Entry type unknown -> treat all fields as required
+"//"";"
+// Entry type unknown -> treat all fields as required
+// Entry type unknown -> treat all fields as required
+// Entry type unknown -> treat all fields as required
+// Add the edit field for Bibtex-key.
+// Entry type unknown -> treat all fields as required
+"// We don't already know the file type, so we try to deduce it from the extension:"
+"// Now we know the extension, check if it is one we know about:"
+"//panel.getUndoManager().addEdit(new UndoableFieldChange(entry, editor.getName(), text, nextAbbreviation));"
+"//icon.setToo(Localization.lang(""Open"") + "" PDF"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" CiteSeer URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" ArXiv URL"");"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" DOI "" + Localization.lang(""web link""));"
+"//icon.setToolTipText(Localization.lang(""Open"") + "" PS"");"
+"//LOGGER.info(""Error: no table icon defined for type '"" + fieldType + ""'."");"
+"//LOGGER.info(""Error: no table icon defined for type '"" + field + ""'."");"
+// Write required fields first.
+// Then optional fields.
+// Then write remaining fields in alphabetic order.
+"// Far from the threshold value, so we base our decision on the required fields only"
+"// Close to the threshold value, so we take a look at the optional fields, if any:"
+"// We don't know about the type, so simply compare fields without any distinction between optional/required"
+"// If the field is non-standard, we will just append braces, wrap and write."
+"// Otherwise (enrich returns empty optional) it is a completely unknown entry type, so ignore it"
+"//new AuthorLastFirst().format(getField(e, StandardField.AUTHOR_FIELD)));"
+"//new AuthorLastFirst().format(getField(e, StandardField.EDITOR_FIELD)));"
+"//new AuthorLastFirst().format(getField(e, StandardField.AUTHOR_FIELD)));"
+"//new AuthorLastFirst().format(getField(e, StandardField.EDITOR_FIELD)));"
+// Increment entry counter.
+"//entry.setField(StandardField.IEEE_ID, jsonEntry.optString(""article_number""));"
+"// new FieldFormatterCleanup(StandardField.URL, new ClearFormatter()).cleanup(entry);"
+"// new FieldFormatterCleanup(StandardField.URL, new ClearFormatter()).cleanup(entry);"
+// For biblatex
+"//"") || s.startsWith(""ftp://"") ? StandardField.URL"
+// To store custom entry types parsed.
+"// at least one online database exports bibtex likes to do that, making"
+// Default
+// make all of them PT?
+"// set ""Review"" in Note/Comment?"
+// Normalize whitespaces
+// Normalize whitespaces
+// reference layout mapped from entry type:
+"//github.com/JabRef"");"
+//noinspection unchecked
+// Treat required fields as important ones
+// A reference to the entry this editor works on.
+// Alt on Windows
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Shift on Windows or no modifier
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Alt on Windows
+// Shift on Windows or no modifier
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Alt on Windows
+// Shift on Windows or no modifier
+// LaTeX citations tab
+// Skip comments and blank lines.
+// Skip the citation matching if the line does not contain the given entry to speed up the parsing.
+// Skip comments and blank lines.
+// Skip the citation matching if the line does not contain the given entry to speed up the parsing.
+// Done by bindings
+// TODO: Find a better way to update preview
+//basePanel.getPreviewPanel().updateLayout(preferences.getPreviewPreferences());
+//github.com/FXMisc/RichTextFX/blob/master/LICENSE and:
+//github.com/FXMisc/RichTextFX/blob/master/richtextfx-demos/README.md#xml-editor
+// see https://stackoverflow.com/questions/28603224/sort-tableview-with-drag-and-drop-rows
+//stores all the date tags from highest to lowest priority
+//if the year is parsebale we have found a higher priority date
+"//We can't parse the year, we ignore it"
+// if we found a date
+"// The month part is unparseable, so we ignore it."
+"//drugg.fgg.uni-lj.si/701/1/GEV_0199_Sajovic.pdf\""        },        \""82005804\"": {            \""abstract\"": \""abstract\"",            \""year_published\"": null,            \""item_id_original\"": \""30145702\"",            \""language_provided\"": null,            \""recommendation_id\"": \""2\"",            \""title\"": \""Engagement of the volunteers in the solution to the accidents in the South-Moravia region\""        },        \""82149599\"": {            \""abstract\"": \""abstract\"",            \""year_published\"": null,            \""item_id_original\"": \""97690763\"",            \""language_provided\"": null,            \""recommendation_id\"": \""3\"",            \""title\"": \""\\\""The only Father's word\\\"". The relationship of the Father and the Son in the documents of saint John of the Cross\"",            \""url\"": \""http://www.nusl.cz/ntk/nusl-285711\""        },        \""84863921\"": {            \""abstract\"": \""abstract\"",            \""authors\"":\""Kaffa, Elena\"",            \""year_published\"": null,            \""item_id_original\"": \""19397104\"",            \""keywords\"": [                \""BX\"",                \""D111\""            ],            \""language_provided\"": \""en\"",            \""recommendation_id\"": \""4\"",            \""title\"": \""Greek Church of Cyprus, the Morea and Constantinople during the Frankish Era (1196-1303)\""        },        \""88950992\"": {            \""abstract\"": \""abstract\"",            \""authors\"":\""Yasui, Kono\"",            \""year_published\"": null,            \""item_id_original\"": \""38763657\"",            \""language_provided\"": null,            \""recommendation_id\"": \""5\"",            \""title\"": \""A Phylogenetic Consideration on the Vascular Plants, Cotyledonary Node Including Hypocotyl Being Taken as the Ancestral Form : A Preliminary Note\""        }    }}"";"
+// Check if the current line contains a given entry (or 'entry' parameter is null).
+// Check if there is a given entry.
+// Need to run this on the JavaFX thread
+// Need to run this on the JavaFX thread
+// Skip comments and blank lines.
+// Done by bindings
+// TODO: Find a better way to update preview
+//basePanel.getPreviewPanel().updateLayout(preferences.getPreviewPreferences());
+//github.com/FXMisc/RichTextFX/blob/master/LICENSE and:
+//github.com/FXMisc/RichTextFX/blob/master/richtextfx-demos/README.md#xml-editor
+// see https://stackoverflow.com/questions/28603224/sort-tableview-with-drag-and-drop-rows
+// Skip comments and blank lines.
+"// Parse all files referenced by TEX files, recursively."
+// LaTeX citations tab
+// LaTeX references tab
+// A reference to the entry this editor works on.
+// Alt on Windows
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Shift on Windows or no modifier
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Alt on Windows
+// Shift on Windows or no modifier
+"// Ctrl on Windows, no modifier on Xubuntu"
+// Alt on Windows
+// Shift on Windows or no modifier
+// Always false
+// Done by bindings
+// TODO: Find a better way to update preview
+//basePanel.getPreviewPanel().updateLayout(preferences.getPreviewPreferences());
+//github.com/FXMisc/RichTextFX/blob/master/LICENSE and:
+//github.com/FXMisc/RichTextFX/blob/master/richtextfx-demos/README.md#xml-editor
+// see https://stackoverflow.com/questions/28603224/sort-tableview-with-drag-and-drop-rows
+"//www.ottobib.com/isbn/9782819502746/bibtex"");"
+"//www.ottobib.com/isbn/9782819502746/bibtex"");"
+// Skip comments and blank lines.
+"// Parse all files referenced by TEX files, recursively."
+"//nothing found at ebook.de and chimbori.com, try ottobib"
+//www.ottobib.com
+"//www.ottobib.com/isbn/"" + identifier + ""/bibtex"";"
+// ottobib does not return an ISBN.
+// Skip comments and blank lines.
+// Copy database definitions.
+// Skip comment lines.
+"// Parse all files referenced by TEX files, recursively."
+"// masterDatabase=%s // unresolvedKeys=%s // newDatabase=%s // insertedStrings=%s // crossRefEntriesCount=%s}%n"","
+"// nestedFiles=%s // citations=%s}%n"","
+// Copy database definitions
+// Skip comment lines.
+// Copy database definitions
+// Check entries
+// Check paths
+// Check lines
+// Check columns
+// Check line texts
+// Check contexts
+// Check entries
+// Check paths
+// Check lines
+// Check columns
+// Check line texts
+// Check contexts
+// Check entries
+// Check paths
+// Check lines
+// Check columns
+// Check line texts
+// Check contexts
+//stores all the date tags from highest to lowest priority
+//if the year is parsebale we have found a higher priority date
+"//We can't parse the year, we ignore it"
+// if we found a date
+"// The month part is unparseable, so we ignore it."
+"//drugg.fgg.uni-lj.si/701/1/GEV_0199_Sajovic.pdf\""        },        \""82005804\"": {            \""abstract\"": \""abstract\"",            \""year_published\"": null,            \""item_id_original\"": \""30145702\"",            \""language_provided\"": null,            \""recommendation_id\"": \""2\"",            \""title\"": \""Engagement of the volunteers in the solution to the accidents in the South-Moravia region\""        },        \""82149599\"": {            \""abstract\"": \""abstract\"",            \""year_published\"": null,            \""item_id_original\"": \""97690763\"",            \""language_provided\"": null,            \""recommendation_id\"": \""3\"",            \""title\"": \""\\\""The only Father's word\\\"". The relationship of the Father and the Son in the documents of saint John of the Cross\"",            \""url\"": \""http://www.nusl.cz/ntk/nusl-285711\""        },        \""84863921\"": {            \""abstract\"": \""abstract\"",            \""authors\"":\""Kaffa, Elena\"",            \""year_published\"": null,            \""item_id_original\"": \""19397104\"",            \""keywords\"": [                \""BX\"",                \""D111\""            ],            \""language_provided\"": \""en\"",            \""recommendation_id\"": \""4\"",            \""title\"": \""Greek Church of Cyprus, the Morea and Constantinople during the Frankish Era (1196-1303)\""        },        \""88950992\"": {            \""abstract\"": \""abstract\"",            \""authors\"":\""Yasui, Kono\"",            \""year_published\"": null,            \""item_id_original\"": \""38763657\"",            \""language_provided\"": null,            \""recommendation_id\"": \""5\"",            \""title\"": \""A Phylogenetic Consideration on the Vascular Plants, Cotyledonary Node Including Hypocotyl Being Taken as the Ancestral Form : A Preliminary Note\""        }    }}"";"
+//stores all the date tags from highest to lowest priority
+//if the year is parsebale we have found a higher priority date
+"//We can't parse the year, we ignore it"
+// if we found a date
+"// The month part is unparseable, so we ignore it."
+"//drugg.fgg.uni-lj.si/701/1/GEV_0199_Sajovic.pdf\""        },        \""82005804\"": {            \""abstract\"": \""abstract\"",            \""year_published\"": null,            \""item_id_original\"": \""30145702\"",            \""language_provided\"": null,            \""recommendation_id\"": \""2\"",            \""title\"": \""Engagement of the volunteers in the solution to the accidents in the South-Moravia region\""        },        \""82149599\"": {            \""abstract\"": \""abstract\"",            \""year_published\"": null,            \""item_id_original\"": \""97690763\"",            \""language_provided\"": null,            \""recommendation_id\"": \""3\"",            \""title\"": \""\\\""The only Father's word\\\"". The relationship of the Father and the Son in the documents of saint John of the Cross\"",            \""url\"": \""http://www.nusl.cz/ntk/nusl-285711\""        },        \""84863921\"": {            \""abstract\"": \""abstract\"",            \""authors\"":\""Kaffa, Elena\"",            \""year_published\"": null,            \""item_id_original\"": \""19397104\"",            \""keywords\"": [                \""BX\"",                \""D111\""            ],            \""language_provided\"": \""en\"",            \""recommendation_id\"": \""4\"",            \""title\"": \""Greek Church of Cyprus, the Morea and Constantinople during the Frankish Era (1196-1303)\""        },        \""88950992\"": {            \""abstract\"": \""abstract\"",            \""authors\"":\""Yasui, Kono\"",            \""year_published\"": null,            \""item_id_original\"": \""38763657\"",            \""language_provided\"": null,            \""recommendation_id\"": \""5\"",            \""title\"": \""A Phylogenetic Consideration on the Vascular Plants, Cotyledonary Node Including Hypocotyl Being Taken as the Ancestral Form : A Preliminary Note\""        }    }}"";"
+//github.com/FXMisc/RichTextFX/blob/master/LICENSE and:
+"// does not accept a property, so this is using availableLayouts"
+// see https://stackoverflow.com/questions/28603224/sort-tableview-with-drag-and-drop-rows
+//stores all the date tags from highest to lowest priority
